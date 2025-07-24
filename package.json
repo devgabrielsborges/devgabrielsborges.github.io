@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "npm run build && gh-pages -d dist"
+    "deploy": "npm run build && gh-pages -d dist",
+    "update-projects": "node scripts/update-projects.js",
+    "auto-deploy": "npm run update-projects && npm run deploy"
   },
   "dependencies": {
     "vue": "^3.4.0",

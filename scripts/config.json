@@ -1,0 +1,40 @@
+{
+  "github": {
+    "username": "devgabrielsborges",
+    "maxProjects": 3,
+    "excludeRepos": [
+      "devgabrielsborges.github.io"
+    ],
+    "includePrivate": false
+  },
+  "content": {
+    "sectionTitle": "Projetos Recentes",
+    "sectionDescription": "Últimos projetos em andamento (atualizado automaticamente)",
+    "defaultDescription": "Projeto de desenvolvimento e inovação tecnológica com foco em soluções práticas e eficientes."
+  },
+  "customDescriptions": {
+    "handmark": "Transforme suas anotações manuscritas em arquivos .md em segundos. Ferramenta de IA/ML para conversão inteligente de handwriting para Markdown.",
+    "dashborges": "Dashboard financeiro poderoso construído com Python. Permite rastrear, analisar e visualizar dados financeiros pessoais com Streamlit e FastAPI.",
+    "vision-app": "Aplicação TypeScript focada em visão computacional e processamento de imagens. Projeto com arquitetura moderna e interface intuitiva para análise visual.",
+    "carpenter": "Ferramenta de web scraping para extração de vagas de emprego. Busca e analisa oportunidades de trabalho em múltiplas plataformas.",
+    "scrivener": "Aplicação CLI de gerenciamento de tarefas escrita em C/Cython. Ferramenta simples e eficiente para organização pessoal.",
+    "servant-xbot": "Bot para rastreamento de preços da Amazon e geração de links de afiliados. Automatiza monitoramento de produtos e oportunidades.",
+    "mcp-fl": "Integração do Model Context Protocol para Federated Learning escalável. Projeto de pesquisa em aprendizado de máquina distribuído.",
+    "algorithms": "Estudos e implementações de algoritmos fundamentais. Coleção de soluções em C para problemas clássicos de programação.",
+    "autorriculum": "Sistema automatizado de geração de currículos personalizados. Ferramenta inteligente para criação de CVs otimizados.",
+    "replica": "Ferramenta de replicação e sincronização de dados. Sistema robusto para backup e espelhamento de informações."
+  },
+  "technologyMapping": {
+    "ai": ["IA/ML", "Artificial Intelligence"],
+    "ml": ["IA/ML", "Machine Learning"],
+    "dashboard": ["Dashboard", "Analytics"],
+    "cli": ["CLI", "Command Line"],
+    "web": ["Web Scraping", "Web Development"],
+    "bot": ["Automation", "Bot"],
+    "streamlit": ["Streamlit"],
+    "fastapi": ["FastAPI"],
+    "docker": ["Docker"],
+    "gtk": ["GTK", "Desktop"],
+    "vision": ["Computer Vision", "Image Processing"]
+  }
+}
