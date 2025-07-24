@@ -346,7 +346,7 @@
               ideias em realidade. Estou sempre aberto para discutir novas oportunidades, 
               projetos de freelance e desafios tecnológicos.
             </p>
-            <a href="mailto:gabriel.sborges@upe.br" class="cta-button"
+            <a href="mailto:dev.gabrielsborges@gmail.com" class="cta-button"
               >Entre em Contato</a
             >
           </div>
