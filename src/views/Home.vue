@@ -102,7 +102,7 @@
             </div>
             <div class="hero-card">
               <div class="hero-image-container">
-                <img src="/assets/hero.jpeg" alt="Gabriel Borges" class="hero-image" />
+                <img :src="heroImage" alt="Gabriel Borges" class="hero-image" />
               </div>
             </div>
           </div>
@@ -204,8 +204,15 @@
 </template>
 
 <script>
+import heroImage from '/assets/hero.jpeg'
+
 export default {
   name: "Home",
+  data() {
+    return {
+      heroImage
+    }
+  },
   mounted() {
     // Add smooth scrolling behavior
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
