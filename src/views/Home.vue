@@ -4,8 +4,7 @@
     <header class="header">
       <div class="container">
         <div class="header-content">
-          <a href="#" class="logo">Borges.
-🏌️</a>
+          <a href="#" class="logo">gabrielsborges</a>
           <div class="nav-icons">
             <!-- GitHub Icon -->
             <a href="https://github.com/devgabrielsborges" target="_blank" class="nav-icon-link">
@@ -82,7 +81,6 @@
               <h2>Gabriel Borges</h2>
               <p class="location"><strong>Recife, Pernambuco, Brasil</strong></p>
               <p class="contact-info">
-                <a href="mailto:gabriel.sborges@upe.br">gabriel.sborges@upe.br</a> | 
                 <a href="https://linkedin.com/in/devgabrielsborges" target="_blank">linkedin.com/in/devgabrielsborges</a> | 
                 <a href="https://github.com/devgabrielsborges" target="_blank">github.com/devgabrielsborges</a>
               </p>

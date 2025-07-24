@@ -87,7 +87,6 @@ body {
   background: #f8f9fa;
   border: 2px solid #333;
   border-radius: 20px;
-  padding: 3rem;
   text-align: left;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
@@ -97,13 +96,16 @@ body {
 
 .bio-card {
   min-height: 400px;
+  max-height: 55rem;
+  padding: 3rem;
 }
 
 .hero-card {
-  min-height: 600px;
+  min-height: 55rem;
   width: 100%;
   max-width: 100%;
   margin: 0;
+  padding: 1rem;
   text-align: center;
 }
 
@@ -159,14 +161,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
 }
 
 .hero-image {
   width: auto;
-  max-width: 100%;
-  height: auto;
-  max-height: 600px;
+  height: 50rem;
   object-fit: contain;
   border-radius: 24px;
   transition: transform 0.3s ease;
@@ -225,11 +224,13 @@ body {
   color: #888;
   font-weight: 500;
   margin-bottom: 0.8rem !important;
+  text-align: start;
 }
 
 .project-card p {
   color: #666;
   font-size: 0.95rem;
+  text-align: start;
 }
 
 /* Latest Projects */
