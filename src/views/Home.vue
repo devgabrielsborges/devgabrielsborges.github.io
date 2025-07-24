@@ -246,7 +246,16 @@
                 <span class="tech-tag">CMake</span>
               </div>
             </div>
+          </div>
 
+          <div class="projects-header">
+            <h2>Projetos Recentes</h2>
+            <p>
+              Últimos projetos em andamento
+            </p>
+          </div>
+
+          <div class="projects-grid">
             <div class="project-card">
               <div class="project-header">
                 <h3>Pacotes PyPI</h3>
