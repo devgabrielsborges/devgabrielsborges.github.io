@@ -239,14 +239,93 @@ body {
   border: 2px solid #333;
   border-radius: 20px;
   padding: 2.5rem;
-  text-align: center;
   margin-bottom: 3rem;
 }
 
 .latest-projects h3 {
   font-size: 1.8rem;
   font-weight: 600;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Featured Projects Section */
+.featured-projects-section {
+  padding: 4rem 0;
+  background: white;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 1rem;
+}
+
+.project-header h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.project-links {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: #f8f9fa;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  color: #333;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.project-link:hover {
+  background: #333;
+  color: white;
+  border-color: #333;
+}
+
+.project-link.private {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.project-link.private:hover {
+  background: #f8f9fa;
+  color: #333;
+  border-color: #e5e5e5;
+}
+
+.project-description {
+  color: #666;
+  font-size: 0.95rem;
+  text-align: left;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-tag {
+  background: #f0f0f0;
+  color: #333;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid #e0e0e0;
 }
 
 /* Experience Section */
@@ -260,7 +339,6 @@ body {
   border: 2px solid #333;
   border-radius: 20px;
   padding: 3rem;
-  text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -273,6 +351,7 @@ body {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
+  text-align: center;
 }
 
 /* Contact Section */
@@ -370,5 +449,20 @@ body {
   
   .container {
     padding: 0 15px;
+  }
+  
+  .project-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .project-links {
+    align-self: flex-end;
+  }
+  
+  .tech-tag {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.6rem;
   }
 }
