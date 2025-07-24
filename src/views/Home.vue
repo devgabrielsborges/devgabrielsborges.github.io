@@ -347,7 +347,7 @@
               projetos de freelance e desafios tecnológicos.
             </p>
             <a href="mailto:gabriel.sborges@upe.br" class="cta-button"
-              >Get In Touch</a
+              >Entre em Contato</a
             >
           </div>
         </div>
