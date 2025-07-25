@@ -26,5 +26,3 @@ yarn-error.log*
 # Legacy files
 *.txt
 base.md
-
-*lock*
