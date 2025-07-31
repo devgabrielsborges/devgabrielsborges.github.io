@@ -1,5 +1,7 @@
 # Dependencies
 node_modules/
+api/node_modules/
+functions/*/node_modules/
 
 # Build output
 dist/
@@ -8,6 +10,8 @@ dist/
 .env
 .env.local
 .env.*.local
+api/.env
+functions/*/.env
 
 # IDE
 .vscode/

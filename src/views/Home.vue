@@ -37,7 +37,7 @@
               </svg>
             </a>
             <!-- Email Icon -->
-            <a href="mailto:dev.gabrielsborges@gmail.com" class="nav-icon-link">
+            <a href="mailto:gabrielsborges@ieee.org" class="nav-icon-link">
               <svg
                 class="nav-icon"
                 viewBox="0 0 24 24"
@@ -347,12 +347,91 @@
             <h2>Vamos trabalhar juntos</h2>
             <p>
               Tem um projeto interessante em mente? Vamos colaborar e transformar suas 
-              ideias em realidade. Estou sempre aberto para discutir novas oportunidades, 
-              projetos de freelance e desafios tecnológicos.
+              ideias em realidade. Preencha o formulário abaixo e vamos discutir como 
+              posso ajudar a tornar seu projeto uma realidade.
             </p>
-            <a href="mailto:dev.gabrielsborges@gmail.com" class="cta-button"
-              >Entre em Contato</a
-            >
+            
+            <form @submit.prevent="submitContactForm" class="contact-form">
+              <div class="form-group">
+                <label for="name">Nome *</label>
+                <input 
+                  type="text" 
+                  id="name" 
+                  v-model="contactForm.name" 
+                  required 
+                  placeholder="Seu nome completo"
+                />
+              </div>
+              
+              <div class="form-group">
+                <label for="email">Email *</label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  v-model="contactForm.email" 
+                  required 
+                  placeholder="seu.email@exemplo.com"
+                />
+              </div>
+              
+              <div class="form-group">
+                <label for="company">Empresa/Organização</label>
+                <input 
+                  type="text" 
+                  id="company" 
+                  v-model="contactForm.company" 
+                  placeholder="Nome da sua empresa (opcional)"
+                />
+              </div>
+              
+              <div class="form-group">
+                <label for="budget">Orçamento Estimado</label>
+                <select id="budget" v-model="contactForm.budget">
+                  <option value="">Selecione uma faixa</option>
+                  <option value="under-1k">Até R$ 1.000</option>
+                  <option value="1k-5k">R$ 1.000 - R$ 5.000</option>
+                  <option value="5k-10k">R$ 5.000 - R$ 10.000</option>
+                  <option value="10k-25k">R$ 10.000 - R$ 25.000</option>
+                  <option value="25k-plus">Acima de R$ 25.000</option>
+                  <option value="discuss">Prefiro discutir</option>
+                </select>
+              </div>
+              
+              <div class="form-group">
+                <label for="timeline">Prazo do Projeto</label>
+                <select id="timeline" v-model="contactForm.timeline">
+                  <option value="">Selecione um prazo</option>
+                  <option value="asap">O mais rápido possível</option>
+                  <option value="1-month">Até 1 mês</option>
+                  <option value="2-3-months">2-3 meses</option>
+                  <option value="3-6-months">3-6 meses</option>
+                  <option value="6-plus-months">Mais de 6 meses</option>
+                  <option value="flexible">Flexível</option>
+                </select>
+              </div>
+              
+              <div class="form-group">
+                <label for="project">Descreva seu Projeto *</label>
+                <textarea 
+                  id="project" 
+                  v-model="contactForm.project" 
+                  required 
+                  rows="6"
+                  placeholder="Conte-me sobre seu projeto: objetivos, tecnologias preferidas, funcionalidades principais, etc."
+                ></textarea>
+              </div>
+              
+              <button type="submit" class="cta-button" :disabled="isSubmitting">
+                {{ isSubmitting ? 'Enviando...' : 'Enviar Proposta' }}
+              </button>
+            </form>
+            
+            <div class="contact-alternative">
+              <p>Ou entre em contato diretamente:</p>
+              <a href="mailto:gabrielsborges@ieee.org" class="email-link">
+                gabrielsborges@ieee.org
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -367,7 +446,80 @@ export default {
   name: "Home",
   data() {
     return {
-      heroImage
+      heroImage,
+      isSubmitting: false,
+      contactForm: {
+        name: '',
+        email: '',
+        company: '',
+        budget: '',
+        timeline: '',
+        project: ''
+      }
+    }
+  },
+  methods: {
+    async submitContactForm() {
+      this.isSubmitting = true;
+      
+      try {
+        const formData = {
+          name: this.contactForm.name.trim(),
+          email: this.contactForm.email.trim(),
+          company: this.contactForm.company.trim(),
+          budget: this.contactForm.budget,
+          timeline: this.contactForm.timeline,
+          project: this.contactForm.project.trim()
+        };
+
+        const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:3001/api/contact';
+        
+        const isAppwriteFunction = apiUrl.includes('appwrite.global') || apiUrl.includes('/functions/v1/functions/');
+        
+        const requestUrl = isAppwriteFunction 
+          ? `${apiUrl}/executions`
+          : apiUrl;                 
+        
+        const response = await fetch(requestUrl, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData)
+        });
+
+        const result = await response.json();
+
+        if (response.ok && result.success) {
+          this.resetForm();
+          alert('✅ ' + result.message);
+        } else {
+          throw new Error(result.message || 'Erro ao enviar mensagem');
+        }
+        
+      } catch (error) {
+        console.error('Erro ao enviar formulário:', error);
+        
+        // Check if it's a network error
+        if (error.name === 'TypeError' && error.message.includes('fetch')) {
+          alert('❌ Erro de conexão. Verifique sua internet e tente novamente.');
+        } else {
+          alert('❌ ' + (error.message || 'Erro ao enviar mensagem. Tente novamente.'));
+        }
+      } finally {
+        this.isSubmitting = false;
+      }
+    },
+    
+    resetForm() {
+      this.contactForm = {
+        name: '',
+        email: '',
+        company: '',
+        budget: '',
+        timeline: '',
+        project: ''
+      };
     }
   },
   mounted() {
