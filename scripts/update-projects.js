@@ -9,9 +9,24 @@ const __dirname = dirname(__filename);
 
 const GITHUB_USERNAME = 'devgabrielsborges';
 const PROJECTS_JSON_PATH = join(__dirname, '..', 'public', 'latest-projects.json');
+const IGNORE_JSON_PATH = join(__dirname, '..', 'ignore.json');
 const GITHUB_API_BASE = 'https://api.github.com';
 
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
+
+/**
+ * Load the ignore list from ignore.json
+ */
+async function loadIgnoreList() {
+  try {
+    const ignoreFileContent = await readFile(IGNORE_JSON_PATH, 'utf-8');
+    const ignoreData = JSON.parse(ignoreFileContent);
+    return ignoreData.ignoredProjects || [];
+  } catch (error) {
+    console.warn('⚠️  Could not load ignore.json, proceeding without ignored projects');
+    return [];
+  }
+}
 
 /**
  * Fetch user's repositories from GitHub API
@@ -26,6 +41,10 @@ async function fetchGitHubRepos() {
     if (GITHUB_TOKEN) {
       headers['Authorization'] = `token ${GITHUB_TOKEN}`;
     }
+
+    console.log('Loading ignore list...');
+    const ignoredProjects = await loadIgnoreList();
+    console.log(`📋 Ignored projects: ${ignoredProjects.length > 0 ? ignoredProjects.join(', ') : 'none'}`);
 
     console.log('Fetching repositories from GitHub...');
     const response = await fetch(`${GITHUB_API_BASE}/users/${GITHUB_USERNAME}/repos?per_page=100&sort=updated`, {
@@ -43,7 +62,7 @@ async function fetchGitHubRepos() {
       .filter(repo => 
         !repo.fork &&
         !repo.archived &&
-        repo.name !== `${GITHUB_USERNAME}.github.io` && // Exclude portfolio repo itself
+        !ignoredProjects.includes(repo.name) &&
         repo.updated_at
       )
       .sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at))

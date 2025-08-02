@@ -1,0 +1,8 @@
+{
+  "ignoredProjects": [
+    "devgabrielsborges.github.io",
+    "devgabrielsborges"
+  ],
+  "description": "List of GitHub repository names to ignore when fetching latest projects",
+  "note": "Add repository names (not full URLs) that you don't want to appear in your portfolio. Examples: 'old-project', 'test-repo', 'private-experiments'"
+}

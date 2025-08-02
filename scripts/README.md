@@ -10,10 +10,11 @@ Fetches the latest 3 repositories from GitHub and updates the "Projetos Recentes
 
 **Features:**
 - Fetches repositories using GitHub API
-- Filters out forks, archived repos, and the portfolio repo itself
+- Filters out forks, archived repos, and projects in the ignore list
 - Gets repository languages and topics for tech tags
 - Automatically generates project cards with descriptions and links
 - Sorts by most recently updated
+- Supports ignoring specific projects via `ignore.json`
 
 **Usage:**
 ```bash
@@ -59,6 +60,31 @@ schedule:
 ```
 
 ### Customizing Project Selection
+
+#### Ignoring Specific Projects
+
+To exclude specific repositories from appearing in your portfolio, add them to the `ignore.json` file in the root directory:
+
+```json
+{
+  "ignoredProjects": [
+    "devgabrielsborges.github.io",
+    "old-project",
+    "private-experiments",
+    "test-repo"
+  ],
+  "description": "List of GitHub repository names to ignore when fetching latest projects",
+  "note": "Add repository names (not full URLs) that you don't want to appear in your portfolio"
+}
+```
+
+**How it works:**
+- Add repository names (not URLs) to the `ignoredProjects` array
+- The script automatically excludes these repositories when fetching
+- Changes to `ignore.json` are automatically committed by GitHub Actions
+- No need to restart any services - changes take effect on next run
+
+#### Advanced Filtering
 
 To modify which projects are included, edit the filter logic in `update-projects.js`:
 
