@@ -464,11 +464,9 @@
 import heroImage from '/assets/hero.jpeg'
 import { Client, Functions } from 'appwrite'
 
-// Initialize Appwrite client
 const client = new Client()
-client
-  .setEndpoint('https://nyc.cloud.appwrite.io/v1')
-  .setProject('688bdc4a002f01af84b8')
+  .setEndpoint(import.meta.env.VITE_APPWRITE_ENDPOINT)
+  .setProject(import.meta.env.VITE_APPWRITE_PROJECT_ID)
 
 const functions = new Functions(client)
 
