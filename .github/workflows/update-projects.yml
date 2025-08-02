@@ -1,0 +1,76 @@
+name: Update Latest Projects
+
+on:
+  schedule:
+    # Run every day at 12:00 PM UTC (you can adjust timezone as needed)
+    - cron: '0 12 * * *'
+  workflow_dispatch: # Allow manual triggering
+  
+env:
+  NODE_VERSION: '18'
+
+jobs:
+  update-projects:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Update projects from GitHub
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npm run update-projects
+      
+      - name: Check for changes
+        id: verify-changed-files
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "changed=true" >> $GITHUB_OUTPUT
+            echo "Changes detected:"
+            git status --porcelain
+          else
+            echo "changed=false" >> $GITHUB_OUTPUT
+            echo "No changes detected"
+          fi
+      
+      - name: Commit and push changes
+        if: steps.verify-changed-files.outputs.changed == 'true'
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add public/latest-projects.json
+          git commit -m "🚀 Auto-update latest projects from GitHub API
+          
+          Updated at: $(date -u +'%Y-%m-%d %H:%M:%S UTC')
+          
+          - Fetched latest 3 repositories
+          - Updated project descriptions and tech tags
+          - Automated via GitHub Actions"
+          git push
+            
+      - name: Summary
+        run: |
+          if [ "${{ steps.verify-changed-files.outputs.changed }}" == "true" ]; then
+            echo "✅ Projects updated and deployed successfully!"
+            echo "🔗 Check your portfolio at: https://devgabrielsborges.github.io"
+          else
+            echo "ℹ️ No updates needed - projects are already current"
+          fi
