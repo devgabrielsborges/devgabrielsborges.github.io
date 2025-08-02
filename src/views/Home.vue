@@ -347,90 +347,111 @@
             <h2>Vamos trabalhar juntos</h2>
             <p>
               Tem um projeto interessante em mente? Vamos colaborar e transformar suas 
-              ideias em realidade. Preencha o formulário abaixo e vamos discutir como 
-              posso ajudar a tornar seu projeto uma realidade.
+              ideias em realidade. Estou sempre aberto para discutir novas oportunidades, 
+              projetos de freelance e desafios tecnológicos.
             </p>
             
+            <!-- Contact Form -->
             <form @submit.prevent="submitContactForm" class="contact-form">
-              <div class="form-group">
-                <label for="name">Nome *</label>
-                <input 
-                  type="text" 
-                  id="name" 
-                  v-model="contactForm.name" 
-                  required 
-                  placeholder="Seu nome completo"
-                />
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Nome *</label>
+                  <input
+                    type="text"
+                    id="name"
+                    v-model="contactForm.name"
+                    :class="{ 'error': formErrors.name }"
+                    placeholder="Seu nome completo"
+                    maxlength="100"
+                    required
+                  />
+                  <span v-if="formErrors.name" class="error-message">{{ formErrors.name }}</span>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email *</label>
+                  <input
+                    type="email"
+                    id="email"
+                    v-model="contactForm.email"
+                    :class="{ 'error': formErrors.email }"
+                    placeholder="seu@email.com"
+                    maxlength="254"
+                    required
+                  />
+                  <span v-if="formErrors.email" class="error-message">{{ formErrors.email }}</span>
+                </div>
+              </div>
+              
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="company">Empresa/Organização</label>
+                  <input
+                    type="text"
+                    id="company"
+                    v-model="contactForm.company"
+                    placeholder="Nome da sua empresa (opcional)"
+                    maxlength="200"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="budget">Orçamento</label>
+                  <select id="budget" v-model="contactForm.budget">
+                    <option value="">Selecione (opcional)</option>
+                    <option value="< R$ 5.000">< R$ 5.000</option>
+                    <option value="R$ 5.000 - R$ 15.000">R$ 5.000 - R$ 15.000</option>
+                    <option value="R$ 15.000 - R$ 30.000">R$ 15.000 - R$ 30.000</option>
+                    <option value="R$ 30.000+">R$ 30.000+</option>
+                    <option value="A definir">A definir</option>
+                  </select>
+                </div>
               </div>
               
               <div class="form-group">
-                <label for="email">Email *</label>
-                <input 
-                  type="email" 
-                  id="email" 
-                  v-model="contactForm.email" 
-                  required 
-                  placeholder="seu.email@exemplo.com"
-                />
-              </div>
-              
-              <div class="form-group">
-                <label for="company">Empresa/Organização</label>
-                <input 
-                  type="text" 
-                  id="company" 
-                  v-model="contactForm.company" 
-                  placeholder="Nome da sua empresa (opcional)"
-                />
-              </div>
-              
-              <div class="form-group">
-                <label for="budget">Orçamento Estimado</label>
-                <select id="budget" v-model="contactForm.budget">
-                  <option value="">Selecione uma faixa</option>
-                  <option value="under-1k">Até R$ 1.000</option>
-                  <option value="1k-5k">R$ 1.000 - R$ 5.000</option>
-                  <option value="5k-10k">R$ 5.000 - R$ 10.000</option>
-                  <option value="10k-25k">R$ 10.000 - R$ 25.000</option>
-                  <option value="25k-plus">Acima de R$ 25.000</option>
-                  <option value="discuss">Prefiro discutir</option>
-                </select>
-              </div>
-              
-              <div class="form-group">
-                <label for="timeline">Prazo do Projeto</label>
+                <label for="timeline">Prazo</label>
                 <select id="timeline" v-model="contactForm.timeline">
-                  <option value="">Selecione um prazo</option>
-                  <option value="asap">O mais rápido possível</option>
-                  <option value="1-month">Até 1 mês</option>
-                  <option value="2-3-months">2-3 meses</option>
-                  <option value="3-6-months">3-6 meses</option>
-                  <option value="6-plus-months">Mais de 6 meses</option>
-                  <option value="flexible">Flexível</option>
+                  <option value="">Selecione (opcional)</option>
+                  <option value="Urgente (< 1 semana)">Urgente (< 1 semana)</option>
+                  <option value="1-2 semanas">1-2 semanas</option>
+                  <option value="1 mês">1 mês</option>
+                  <option value="2-3 meses">2-3 meses</option>
+                  <option value="3+ meses">3+ meses</option>
+                  <option value="Flexível">Flexível</option>
                 </select>
               </div>
               
               <div class="form-group">
-                <label for="project">Descreva seu Projeto *</label>
-                <textarea 
-                  id="project" 
-                  v-model="contactForm.project" 
-                  required 
+                <label for="project">Descrição do Projeto *</label>
+                <textarea
+                  id="project"
+                  v-model="contactForm.project"
+                  :class="{ 'error': formErrors.project }"
+                  placeholder="Descreva seu projeto, objetivos, tecnologias desejadas e qualquer detalhe relevante..."
                   rows="6"
-                  placeholder="Conte-me sobre seu projeto: objetivos, tecnologias preferidas, funcionalidades principais, etc."
+                  maxlength="5000"
+                  required
                 ></textarea>
+                <div class="character-count">{{ contactForm.project.length }}/5000</div>
+                <span v-if="formErrors.project" class="error-message">{{ formErrors.project }}</span>
               </div>
               
-              <button type="submit" class="cta-button" :disabled="isSubmitting">
-                {{ isSubmitting ? 'Enviando...' : 'Enviar Proposta' }}
+              <button 
+                type="submit" 
+                class="cta-button"
+                :disabled="isSubmitting"
+                :class="{ 'loading': isSubmitting }"
+              >
+                <span v-if="!isSubmitting">Enviar Mensagem</span>
+                <span v-else>Enviando...</span>
               </button>
+              
+              <div v-if="submitMessage" class="submit-message" :class="submitMessageType">
+                {{ submitMessage }}
+              </div>
             </form>
             
             <div class="contact-alternative">
               <p>Ou entre em contato diretamente:</p>
-              <a href="mailto:gabrielsborges@ieee.org" class="email-link">
-                gabrielsborges@ieee.org
-              </a>
+              <a href="mailto:gabrielsborges@ieee.org" class="email-link">gabrielsborges@ieee.org</a>
             </div>
           </div>
         </div>
@@ -441,13 +462,21 @@
 
 <script>
 import heroImage from '/assets/hero.jpeg'
+import { Client, Functions } from 'appwrite'
+
+// Initialize Appwrite client
+const client = new Client()
+client
+  .setEndpoint('https://nyc.cloud.appwrite.io/v1')
+  .setProject('688bdc4a002f01af84b8')
+
+const functions = new Functions(client)
 
 export default {
   name: "Home",
   data() {
     return {
       heroImage,
-      isSubmitting: false,
       contactForm: {
         name: '',
         email: '',
@@ -455,59 +484,137 @@ export default {
         budget: '',
         timeline: '',
         project: ''
-      }
+      },
+      formErrors: {},
+      isSubmitting: false,
+      submitMessage: '',
+      submitMessageType: ''
     }
   },
   methods: {
+    validateForm() {
+      this.formErrors = {};
+      
+      if (!this.contactForm.name.trim()) {
+        this.formErrors.name = 'Nome é obrigatório';
+      } else if (this.contactForm.name.trim().length < 2) {
+        this.formErrors.name = 'Nome deve ter pelo menos 2 caracteres';
+      } else if (this.contactForm.name.trim().length > 100) {
+        this.formErrors.name = 'Nome muito longo (máximo 100 caracteres)';
+      }
+      
+      if (!this.contactForm.email.trim()) {
+        this.formErrors.email = 'Email é obrigatório';
+      } else {
+        const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+        if (!emailRegex.test(this.contactForm.email)) {
+          this.formErrors.email = 'Por favor, insira um email válido';
+        } else if (this.contactForm.email.length > 254) {
+          this.formErrors.email = 'Email muito longo';
+        }
+      }
+      
+      if (!this.contactForm.project.trim()) {
+        this.formErrors.project = 'Descrição do projeto é obrigatória';
+      } else if (this.contactForm.project.trim().length < 10) {
+        this.formErrors.project = 'Descrição deve ter pelo menos 10 caracteres';
+      } else if (this.contactForm.project.trim().length > 5000) {
+        this.formErrors.project = 'Descrição muito longa (máximo 5000 caracteres)';
+      }
+      
+      return Object.keys(this.formErrors).length === 0;
+    },
+    
     async submitContactForm() {
+      if (!this.validateForm()) {
+        this.showMessage('Por favor, corrija os erros no formulário.', 'error');
+        return;
+      }
+      
       this.isSubmitting = true;
+      this.submitMessage = '';
       
       try {
-        const formData = {
+        console.log('Enviando formulário para Appwrite usando SDK...');
+        
+        const requestData = {
           name: this.contactForm.name.trim(),
-          email: this.contactForm.email.trim(),
+          email: this.contactForm.email.trim().toLowerCase(),
           company: this.contactForm.company.trim(),
           budget: this.contactForm.budget,
           timeline: this.contactForm.timeline,
           project: this.contactForm.project.trim()
         };
-
-        const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:3001/api/contact';
         
-        const isAppwriteFunction = apiUrl.includes('appwrite.global') || apiUrl.includes('/functions/v1/functions/');
+        console.log('Dados do formulário:', requestData);
         
-        const requestUrl = isAppwriteFunction 
-          ? `${apiUrl}/executions`
-          : apiUrl;                 
+        const execution = await functions.createExecution(
+          'contact-form',
+          JSON.stringify(requestData),
+          false,
+          '/',
+          'POST',
+          { 'Content-Type': 'application/json' }
+        );
         
-        const response = await fetch(requestUrl, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(formData)
-        });
-
-        const result = await response.json();
-
-        if (response.ok && result.success) {
-          this.resetForm();
-          alert('✅ ' + result.message);
+        console.log('Execution result:', execution);
+        
+        if (execution.responseStatusCode === 200) {
+          let functionResponse;
+          try {
+            functionResponse = JSON.parse(execution.responseBody);
+          } catch (parseError) {
+            console.error('Erro ao fazer parse da resposta:', parseError);
+            console.log('Response body raw:', execution.responseBody);
+            throw new Error('Resposta inválida do servidor');
+          }
+          
+          if (functionResponse.success) {
+            this.showMessage(functionResponse.message, 'success');
+            this.resetForm();
+          } else {
+            this.showMessage(functionResponse.message || 'Erro ao enviar mensagem. Tente novamente.', 'error');
+          }
         } else {
-          throw new Error(result.message || 'Erro ao enviar mensagem');
+          console.error('Erro na execução:', execution);
+          throw new Error(execution.errors || `Erro HTTP ${execution.responseStatusCode}`);
         }
         
       } catch (error) {
         console.error('Erro ao enviar formulário:', error);
         
-        // Check if it's a network error
-        if (error.name === 'TypeError' && error.message.includes('fetch')) {
-          alert('❌ Erro de conexão. Verifique sua internet e tente novamente.');
+        let errorMessage = 'Erro ao enviar mensagem. ';
+        
+        if (error.name === 'AppwriteException') {
+          if (error.code === 401) {
+            errorMessage += 'Erro de autenticação. Tente novamente.';
+          } else if (error.code === 404) {
+            errorMessage += 'Função não encontrada. Verifique a configuração.';
+          } else if (error.code === 403) {
+            errorMessage += 'Acesso negado. Origem não autorizada.';
+          } else {
+            errorMessage += `Erro do servidor: ${error.message}`;
+          }
+        } else if (error.name === 'TypeError' && error.message.includes('fetch')) {
+          errorMessage += 'Problema de conexão com o servidor. Verifique sua internet.';
         } else {
-          alert('❌ ' + (error.message || 'Erro ao enviar mensagem. Tente novamente.'));
+          errorMessage += 'Tente novamente ou entre em contato diretamente via email.';
         }
+        
+        this.showMessage(errorMessage, 'error');
       } finally {
         this.isSubmitting = false;
+      }
+    },
+    
+    showMessage(message, type) {
+      this.submitMessage = message;
+      this.submitMessageType = type;
+      
+      if (type === 'success') {
+        setTimeout(() => {
+          this.submitMessage = '';
+        }, 5000);
       }
     },
     
@@ -520,10 +627,10 @@ export default {
         timeline: '',
         project: ''
       };
+      this.formErrors = {};
     }
   },
   mounted() {
-    // Add smooth scrolling behavior
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
       anchor.addEventListener("click", function (e) {
         e.preventDefault();
