@@ -1,6 +1,12 @@
 name: Deploy to GitHub Pages
 
 on:
+  # Trigger when the update projects workflow completes
+  workflow_run:
+    workflows: ["Update Latest Projects"]
+    types:
+      - completed
+    branches: ["main"]
   push:
     branches: [main]
   pull_request:
