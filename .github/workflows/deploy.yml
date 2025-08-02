@@ -37,11 +37,11 @@ jobs:
       - name: Clean previous builds
         run: rm -rf dist
 
-      - name: Build and inject environment
-        run: |
-          echo "VITE_APPWRITE_PROJECT_ID=$VITE_APPWRITE_PROJECT_ID" > .env.production
-          echo "VITE_APPWRITE_ENDPOINT=$VITE_APPWRITE_ENDPOINT" >> .env.production
-          npm run build
+      - name: Build
+        env:
+          VITE_APPWRITE_PROJECT_ID: ${{ secrets.VITE_APPWRITE_PROJECT_ID }}
+          VITE_APPWRITE_ENDPOINT: ${{ secrets.VITE_APPWRITE_ENDPOINT }}
+        run: npm run build
 
       - name: List build output
         run: ls -la dist/
