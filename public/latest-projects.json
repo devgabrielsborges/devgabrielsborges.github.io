@@ -1,0 +1,39 @@
+[
+  {
+    "name": "X-Bot",
+    "description": "X-Bot is a Twitter/X automation bot that posts promotional tweets using data stored in Firebase, generates text with AI via Groq Cloud, and sends notifications via SMS with the Twilio API.",
+    "html_url": "https://github.com/devgabrielsborges/X-Bot",
+    "homepage": "",
+    "language": "Python",
+    "topics": [],
+    "updated_at": "2025-08-02T12:52:04Z",
+    "techTags": [
+      "Python"
+    ]
+  },
+  {
+    "name": "bullet-mcp-server",
+    "description": "A Model Context Protocol (MCP) server that provides physics simulation capabilities using PyBullet. This server allows external applications to interact with PyBullet physics simulations through standardized MCP protocol endpoints.",
+    "html_url": "https://github.com/devgabrielsborges/bullet-mcp-server",
+    "homepage": null,
+    "language": "Python",
+    "topics": [],
+    "updated_at": "2025-07-30T02:51:41Z",
+    "techTags": [
+      "Python"
+    ]
+  },
+  {
+    "name": "yarla",
+    "description": "A TypeScript client for interacting with Model Context Protocol (MCP) servers using a local LLM",
+    "html_url": "https://github.com/devgabrielsborges/yarla",
+    "homepage": null,
+    "language": "TypeScript",
+    "topics": [],
+    "updated_at": "2025-07-28T02:40:20Z",
+    "techTags": [
+      "TypeScript",
+      "JavaScript"
+    ]
+  }
+]
