@@ -12,6 +12,7 @@
     "auto-deploy": "npm run update-projects && npm run deploy"
   },
   "dependencies": {
+    "appwrite": "^18.2.0",
     "vue": "^3.4.0",
     "vue-router": "^4.2.0"
   },
