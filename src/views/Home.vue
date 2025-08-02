@@ -464,11 +464,28 @@
 import heroImage from '/assets/hero.jpeg'
 import { Client, Functions } from 'appwrite'
 
-const client = new Client()
-  .setEndpoint(import.meta.env.VITE_APPWRITE_ENDPOINT)
-  .setProject(import.meta.env.VITE_APPWRITE_PROJECT_ID)
+// Check if environment variables are available
+const appwriteEndpoint = import.meta.env.VITE_APPWRITE_ENDPOINT
+const appwriteProjectId = import.meta.env.VITE_APPWRITE_PROJECT_ID
 
-const functions = new Functions(client)
+console.log('Appwrite config:', { 
+  endpoint: appwriteEndpoint, 
+  projectId: appwriteProjectId,
+  hasEndpoint: !!appwriteEndpoint,
+  hasProjectId: !!appwriteProjectId
+})
+
+let client = null
+let functions = null
+
+if (appwriteEndpoint && appwriteProjectId) {
+  client = new Client()
+    .setEndpoint(appwriteEndpoint)
+    .setProject(appwriteProjectId)
+  functions = new Functions(client)
+} else {
+  console.warn('Appwrite environment variables are missing. Contact form will be disabled.')
+}
 
 export default {
   name: "Home",
@@ -526,6 +543,12 @@ export default {
     async submitContactForm() {
       if (!this.validateForm()) {
         this.showMessage('Por favor, corrija os erros no formulário.', 'error');
+        return;
+      }
+      
+      if (!functions) {
+        this.showMessage('Formulário de contato indisponível. Entre em contato diretamente via email: gabrielsborges@ieee.org', 'error');
+        this.isSubmitting = false;
         return;
       }
       
