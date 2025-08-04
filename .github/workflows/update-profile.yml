@@ -44,10 +44,23 @@ jobs:
           npx playwright install chromium
 
       - name: Download and run autorriculum script
+        env:
+          LINKEDIN_EMAIL: ${{ secrets.LINKEDIN_EMAIL }}
+          LINKEDIN_PASSWORD: ${{ secrets.LINKEDIN_PASSWORD }}
+          LINKEDIN_USERNAME: ${{ secrets.LINKEDIN_USERNAME }}
         run: |
           echo "📄 Downloading and running autorriculum script..."
           # Download the script from the autorriculum repository
           curl -o autorriculum.cjs https://raw.githubusercontent.com/devgabrielsborges/autorriculum/main/dist/index.js
+
+          # Verify credentials are set
+          if [ -z "$LINKEDIN_EMAIL" ] || [ -z "$LINKEDIN_PASSWORD" ] || [ -z "$LINKEDIN_USERNAME" ]; then
+            echo "❌ LinkedIn credentials not properly configured in GitHub secrets"
+            echo "Please set LINKEDIN_EMAIL, LINKEDIN_PASSWORD, and LINKEDIN_USERNAME in repository secrets"
+            exit 1
+          fi
+
+          echo "🔐 LinkedIn credentials loaded from GitHub secrets"
 
           # Run the script to generate the profile.pdf
           node autorriculum.cjs
