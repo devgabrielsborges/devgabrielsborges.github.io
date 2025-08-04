@@ -32,10 +32,10 @@ jobs:
         run: |
           echo "📄 Downloading and running autorriculum script..."
           # Download the script from the autorriculum repository
-          curl -o autorriculum.js https://raw.githubusercontent.com/devgabrielsborges/autorriculum/main/dist/index.js
+          curl -o autorriculum.cjs https://raw.githubusercontent.com/devgabrielsborges/autorriculum/main/dist/index.js
 
           # Run the script to generate the profile.pdf
-          node autorriculum.js
+          node autorriculum.cjs
 
           # Check if profile.pdf was generated
           if [ -f "profile.pdf" ]; then
@@ -98,4 +98,4 @@ jobs:
       - name: Cleanup
         run: |
           # Remove the downloaded script
-          rm -f autorriculum.js
+          rm -f autorriculum.cjs
