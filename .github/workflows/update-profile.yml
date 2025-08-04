@@ -28,6 +28,21 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
 
+      - name: Download autorriculum dependencies
+        run: |
+          echo "📦 Downloading autorriculum package files..."
+          # Download package.json and package-lock.json from autorriculum repository
+          curl -o package.json https://raw.githubusercontent.com/devgabrielsborges/autorriculum/main/package.json
+          curl -o package-lock.json https://raw.githubusercontent.com/devgabrielsborges/autorriculum/main/package-lock.json
+
+          # Install exact dependencies using npm ci
+          echo "📦 Installing dependencies with npm ci..."
+          npm ci
+
+          # Install Playwright browsers
+          echo "🎭 Installing Playwright browsers..."
+          npx playwright install chromium
+
       - name: Download and run autorriculum script
         run: |
           echo "📄 Downloading and running autorriculum script..."
