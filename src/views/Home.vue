@@ -52,7 +52,7 @@
               </svg>
             </a>
             <!-- Resume Icon -->
-            <a href="/CV.pdf" target="_blank" class="nav-icon-link">
+            <a href="/profile.pdf" target="_blank" class="nav-icon-link">
               <svg
                 class="nav-icon"
                 viewBox="0 0 24 24"
