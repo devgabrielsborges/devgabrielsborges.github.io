@@ -1,0 +1,101 @@
+name: Update Profile PDF
+
+on:
+  schedule:
+    - cron: "0 1 * * *"
+  workflow_dispatch: # Allow manual triggering
+
+env:
+  NODE_VERSION: "18"
+
+jobs:
+  update-profile:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+      actions: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Download and run autorriculum script
+        run: |
+          echo "📄 Downloading and running autorriculum script..."
+          # Download the script from the autorriculum repository
+          curl -o autorriculum.js https://raw.githubusercontent.com/devgabrielsborges/autorriculum/main/dist/index.js
+
+          # Run the script to generate the profile.pdf
+          node autorriculum.js
+
+          # Check if profile.pdf was generated
+          if [ -f "profile.pdf" ]; then
+            echo "✅ Profile PDF generated successfully"
+            # Move the generated PDF to the public directory
+            mv profile.pdf public/profile.pdf
+          else
+            echo "❌ Profile PDF was not generated"
+            exit 1
+          fi
+
+      - name: Check for changes
+        id: verify-changed-files
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "changed=true" >> $GITHUB_OUTPUT
+            echo "📋 Changes detected in profile.pdf"
+            git status --porcelain
+          else
+            echo "changed=false" >> $GITHUB_OUTPUT
+            echo "ℹ️ No changes detected in profile.pdf"
+          fi
+
+      - name: Commit and push changes
+        if: steps.verify-changed-files.outputs.changed == 'true'
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add public/profile.pdf
+          git commit -m "📄 Auto-update profile.pdf
+
+          Updated at: $(date -u +'%Y-%m-%d %H:%M:%S UTC')
+
+          - Generated new profile PDF using autorriculum
+          - Automated via GitHub Actions"
+          git push
+
+      - name: Trigger deployment
+        if: steps.verify-changed-files.outputs.changed == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.actions.createWorkflowDispatch({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              workflow_id: 'deploy.yml',
+              ref: 'main'
+            })
+
+      - name: Summary
+        run: |
+          if [ "${{ steps.verify-changed-files.outputs.changed }}" == "true" ]; then
+            echo "✅ Profile PDF updated successfully!"
+            echo "🚀 Deploy workflow triggered automatically"
+            echo "🔗 New PDF will be available at: https://devgabrielsborges.github.io/profile.pdf"
+          else
+            echo "ℹ️ No updates needed - profile PDF is already current"
+          fi
+
+      - name: Cleanup
+        run: |
+          # Remove the downloaded script
+          rm -f autorriculum.js
