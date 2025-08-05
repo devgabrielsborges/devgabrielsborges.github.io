@@ -15,6 +15,7 @@ const PROJECTS_JSON_PATH = join(
   "latest-projects.json"
 );
 const IGNORE_JSON_PATH = join(__dirname, "..", "ignore.json");
+const HOME_VUE_PATH = join(__dirname, "..", "src", "views", "Home.vue");
 const GITHUB_API_BASE = "https://api.github.com";
 
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
@@ -31,6 +32,42 @@ async function loadIgnoreList() {
     console.warn(
       "⚠️  Could not load ignore.json, proceeding without ignored projects"
     );
+    return [];
+  }
+}
+
+/**
+ * Extract featured project names from the Vue component
+ */
+async function extractFeaturedProjects() {
+  try {
+    const vueContent = await readFile(HOME_VUE_PATH, "utf-8");
+    const featuredProjects = [];
+    
+    // Look for GitHub links in the "Projetos em Destaque" section
+    // Pattern: href="https://github.com/{any-username}/{project-name}"
+    const githubLinkRegex = /href="https:\/\/github\.com\/[^\/]+\/([^"]+)"/g;
+    
+    // Split content and find the "Projetos em Destaque" section
+    const featuredSectionStart = vueContent.indexOf('<!-- Projects Section -->');
+    const recentSectionStart = vueContent.indexOf('<h2>Projetos Recentes</h2>');
+    
+    if (featuredSectionStart !== -1 && recentSectionStart !== -1) {
+      const featuredSection = vueContent.slice(featuredSectionStart, recentSectionStart);
+      
+      let match;
+      while ((match = githubLinkRegex.exec(featuredSection)) !== null) {
+        const projectName = match[1];
+        if (!featuredProjects.includes(projectName)) {
+          featuredProjects.push(projectName);
+        }
+      }
+    }
+    
+    console.log(`🌟 Extracted featured projects: ${featuredProjects.length > 0 ? featuredProjects.join(", ") : "none"}`);
+    return featuredProjects;
+  } catch (error) {
+    console.warn("⚠️  Could not extract featured projects from Vue component:", error.message);
     return [];
   }
 }
@@ -57,6 +94,9 @@ async function fetchGitHubRepos() {
       }`
     );
 
+    console.log("Extracting featured projects from Vue component...");
+    const featuredProjects = await extractFeaturedProjects();
+
     console.log("Fetching repositories from GitHub...");
     const response = await fetch(
       `${GITHUB_API_BASE}/users/${GITHUB_USERNAME}/repos?per_page=100&sort=updated`,
@@ -80,6 +120,7 @@ async function fetchGitHubRepos() {
           !repo.fork &&
           !repo.archived &&
           !ignoredProjects.includes(repo.name) &&
+          !featuredProjects.some(featured => featured.toLowerCase() === repo.name.toLowerCase()) &&
           repo.updated_at
       )
       .sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at))
