@@ -305,6 +305,73 @@
         </div>
       </section>
 
+      <!-- Academic Works Section -->
+      <section class="academic-works-section">
+        <div class="container">
+          <div class="projects-header">
+            <h2>Trabalhos Acadêmicos</h2>
+            <p>
+              Publicações e trabalhos científicos desenvolvidos durante minha jornada acadêmica
+            </p>
+          </div>
+
+          <div class="academic-works-grid">
+            <div 
+              v-for="paper in academicPapers" 
+              :key="paper.id" 
+              class="academic-paper-card"
+            >
+              <div class="paper-preview">
+                <div class="pdf-preview-container">
+                  <iframe 
+                    :src="paper.pdfUrl + '#toolbar=0&navpanes=0&scrollbar=0'" 
+                    class="pdf-preview"
+                    frameborder="0"
+                    scrolling="no"
+                  ></iframe>
+                  <div class="pdf-overlay">
+                    <a :href="paper.pdfUrl" target="_blank" class="view-pdf-btn">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14,2 14,8 20,8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                        <polyline points="10,9 9,9 8,9"></polyline>
+                      </svg>
+                      Ver PDF
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="paper-info">
+                <h3 class="paper-title">{{ paper.title }}</h3>
+                <div class="paper-metadata">
+                  <span v-if="paper.conference" class="paper-conference">{{ paper.conference }}</span>
+                  <span v-if="paper.year" class="paper-year">{{ paper.year }}</span>
+                </div>
+                <div class="paper-status">
+                  <span 
+                    :class="['status-badge', `status-${paper.status}`]"
+                  >
+                    {{ paper.statusLabel }}
+                  </span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Fallback message if no papers loaded -->
+            <div v-if="academicPapers.length === 0" class="academic-paper-card">
+              <div class="paper-info">
+                <h3 class="paper-title">Carregando trabalhos acadêmicos...</h3>
+                <p class="paper-description">
+                  Os trabalhos acadêmicos estão sendo carregados.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- Experience Section -->
       <section class="experience-section">
         <div class="container">
@@ -477,6 +544,7 @@ export default {
     return {
       heroImage,
       latestProjects: [],
+      academicPapers: [],
       contactForm: {
         name: '',
         email: '',
@@ -637,7 +705,6 @@ export default {
     }
   },
   async mounted() {
-    // Load latest projects from JSON
     try {
       const response = await fetch('/latest-projects.json');
       if (response.ok) {
@@ -648,8 +715,20 @@ export default {
       }
     } catch (error) {
       console.error('Error loading latest projects:', error);
-      // Fallback to empty array if file doesn't exist
       this.latestProjects = [];
+    }
+
+    try {
+      const response = await fetch('/academic-papers.json');
+      if (response.ok) {
+        this.academicPapers = await response.json();
+      } else {
+        console.warn('Could not load academic papers');
+        this.academicPapers = [];
+      }
+    } catch (error) {
+      console.error('Error loading academic papers:', error);
+      this.academicPapers = [];
     }
 
     // Setup smooth scrolling
