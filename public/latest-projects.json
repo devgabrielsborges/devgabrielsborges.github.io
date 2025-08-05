@@ -1,5 +1,17 @@
 [
   {
+    "name": "autorriculum",
+    "description": "LLM based application for creating CVs based on your GitHub and LinkedIn profile",
+    "html_url": "https://github.com/devgabrielsborges/autorriculum",
+    "homepage": null,
+    "language": "TypeScript",
+    "topics": [],
+    "updated_at": "2025-08-04T15:37:43Z",
+    "techTags": [
+      "TypeScript"
+    ]
+  },
+  {
     "name": "X-Bot",
     "description": "X-Bot is a Twitter/X automation bot that posts promotional tweets using data stored in Firebase, generates text with AI via Groq Cloud, and sends notifications via SMS with the Twilio API.",
     "html_url": "https://github.com/devgabrielsborges/X-Bot",
@@ -21,19 +33,6 @@
     "updated_at": "2025-07-30T02:51:41Z",
     "techTags": [
       "Python"
-    ]
-  },
-  {
-    "name": "yarla",
-    "description": "A TypeScript client for interacting with Model Context Protocol (MCP) servers using a local LLM",
-    "html_url": "https://github.com/devgabrielsborges/yarla",
-    "homepage": null,
-    "language": "TypeScript",
-    "topics": [],
-    "updated_at": "2025-07-28T02:40:20Z",
-    "techTags": [
-      "TypeScript",
-      "JavaScript"
     ]
   }
 ]
