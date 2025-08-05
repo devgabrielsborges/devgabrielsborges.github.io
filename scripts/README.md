@@ -6,7 +6,7 @@ This directory contains scripts that automatically update the portfolio website 
 
 ### `update-projects.js`
 
-Fetches the latest 3 repositories from GitHub and updates the "Projetos Recentes" (Recent Projects) section in `src/views/Home.vue`.
+Fetches the latest 3 repositories from GitHub and updates the "Projetos Recentes" (Recent Projects) section in `src/views/Home.vue`. The script automatically excludes any projects that are already featured in the "Projetos em Destaque" section to avoid duplication.
 
 **Features:**
 - Fetches repositories using GitHub API

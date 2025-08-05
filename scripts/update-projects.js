@@ -45,8 +45,8 @@ async function extractFeaturedProjects() {
     const featuredProjects = [];
     
     // Look for GitHub links in the "Projetos em Destaque" section
-    // Pattern: href="https://github.com/{any-username}/{project-name}"
-    const githubLinkRegex = /href="https:\/\/github\.com\/[^\/]+\/([^"]+)"/g;
+    // Pattern: href="https://github.com/devgabrielsborges/{project-name}"
+    const githubLinkRegex = /href="https:\/\/github\.com\/devgabrielsborges\/([^"]+)"/g;
     
     // Split content and find the "Projetos em Destaque" section
     const featuredSectionStart = vueContent.indexOf('<!-- Projects Section -->');
