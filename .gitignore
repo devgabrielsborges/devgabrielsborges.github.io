@@ -30,3 +30,5 @@ yarn-error.log*
 # Legacy files
 *.txt
 base.md
+
+drawings/
