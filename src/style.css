@@ -360,6 +360,165 @@ body {
   border: 1px solid #e0e0e0;
 }
 
+/* Academic Works Section */
+.academic-works-section {
+  padding: 4rem 0;
+  background: #f8f9fa;
+}
+
+.academic-works-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.academic-paper-card {
+  background: white;
+  border: 2px solid #333;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.academic-paper-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.paper-preview {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  background: #f8f9fa;
+}
+
+.pdf-preview-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.pdf-preview {
+  width: 100%;
+  height: 100%;
+  border: none;
+  pointer-events: none;
+  transform: scale(1.2);
+  transform-origin: top left;
+}
+
+.pdf-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.academic-paper-card:hover .pdf-overlay {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.view-pdf-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: white;
+  color: #333;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+
+.academic-paper-card:hover .view-pdf-btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.view-pdf-btn:hover {
+  background: #333;
+  color: white;
+}
+
+.paper-info {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.paper-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.paper-metadata {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.paper-conference {
+  font-size: 0.85rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.paper-year {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.paper-status {
+  margin-top: auto;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-published {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.status-in-progress {
+  background: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeaa7;
+}
+
+.status-submitted {
+  background: #cce5ff;
+  color: #004085;
+  border: 1px solid #b8daff;
+}
+
 /* Experience Section */
 .experience-section {
   padding: 4rem 0;
@@ -661,6 +820,19 @@ body {
     width: 100%;
   }
   
+  .academic-works-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .academic-paper-card {
+    max-width: 100%;
+  }
+  
+  .paper-preview {
+    height: 180px;
+  }
+  
   .bio-card, .hero-card, .experience-card, .contact-card, .project-card {
     padding: 1.5rem;
     width: 100%;
@@ -824,6 +996,22 @@ body {
     max-width: 100%;
     min-width: 0;
     box-sizing: border-box;
+  }
+  
+  .academic-paper-card {
+    padding: 0;
+  }
+  
+  .paper-preview {
+    height: 150px;
+  }
+  
+  .paper-info {
+    padding: 1rem;
+  }
+  
+  .paper-title {
+    font-size: 1rem;
   }
   
   .latest-projects {

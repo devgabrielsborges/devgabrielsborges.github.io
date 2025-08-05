@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "title": "Enabling LLM-based Environment Manipulation in Robotic Simulations via MCP",
+    "pdfUrl": "/papers/LACORO_Gabriel_Souza_Borges.pdf",
+    "conference": "LACORO",
+    "year": "2025",
+    "status": "in-progress",
+    "statusLabel": "Em andamento",
+    "description": "The  MCP  Server  acts  as  the  ”nervous  system,”  exposingthe  functionalities  of  the  simulation  environment  as  a  setof  standardized  Tools.  Based  on  our  implementation,  theserver  exposes  a  comprehensive  set  of  capabilities  for  sceneand object manipulation"
+  }
+]
