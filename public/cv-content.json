@@ -1,0 +1,60 @@
+{
+  "personal_info": {
+    "email": "gabriel.sborges@upe.br",
+    "name": "Gabriel Borges",
+    "location": "Recife, Pernambuco, Brasil",
+    "github": "devgabrielsborges",
+    "linkedin": "devgabrielsborges"
+  },
+  "summary": "Atua como Open Source Developer e é bolsista Líder de Ciência de Dados em PET. Possui familiaridade com ambientes Linux e com conteinerização utilizando Docker. Presta serviços como freelancer, desenvolvendo soluções em Sistemas Embarcados, Desenvolvimento Android, Web Scraping e Inteligência Artificial.",
+  "experience": [
+    {
+      "title": "Bolsista de Extensão Tecnológica & Líder de Ciência de Dados",
+      "company": "FACEPE - Fundação de Amparo à Ciência e Tecnologia do Estado de Pernambuco",
+      "period": "maio de 2025 - Present",
+      "description": "Líder de Ciência de Dados no Projeto de Extensão Tecnológica \"Inteligência Artificial de Pré-diagnóstico para Auxiliar na Tomada de Decisões em Teleconsultas no CISAM\"."
+    },
+    {
+      "title": "Open Source Developer & Mantenedor de Pacotes Python",
+      "company": "Open Source Community",
+      "period": "maio de 2025 - Present",
+      "description": "Desenvolvimento, manutenção e publicação de pacotes Python de código aberto focados em automação, IA e produtividade. Projeto em destaque: Handmark - ferramenta CLI que converte anotações manuscritas em Markdown usando IA multimodal e OCR."
+    },
+    {
+      "title": "Monitor de Linguagem de Programação Imperativa (C)",
+      "company": "Universidade de Pernambuco",
+      "period": "março de 2025 - julho de 2025",
+      "description": "Ministração de aulas sobre conceitos fundamentais da linguagem C, incluindo alocação dinâmica de memória, ponteiros, structs, compilação e otimização. Consultoria em projetos com GCC, CMake e aplicações GTK para Linux e Windows."
+    }
+  ],
+  "education": [],
+  "skills": [
+    "Cython",
+    "Linux",
+    "Sistemas Embarcados",
+    "Automação",
+    "Java",
+    "Android Development",
+    "Web Scraping",
+    "Desenvolvimento Web",
+    "Python",
+    "JavaScript",
+    "Docker",
+    "Inteligência Artificial",
+    "GitHub"
+  ],
+  "projects": [],
+  "certifications": [],
+  "languages": [
+    {
+      "language": "Inglês",
+      "level": "Professional Working"
+    },
+    {
+      "language": "Português",
+      "level": "Native or Bilingual"
+    }
+  ],
+  "raw_markdown": "Contato gabriel.sborges@upe.br\n\nwww.linkedin.com/in/ devgabrielsborges (LinkedIn)\n\nPrincipais competências Software de código aberto Algoritmos\n\nResolução de problemas\n\nLanguages\n\nInglês (Professional Working) Português (Native or Bilingual)\n\n## Certifications\n\nFigma for Developers, v2\n\nAPI Rest\n\nCS50's Introduction to Computer Science\n\nFigma para Devs\n\nAngular 17+  Fundamentals\n\n## Gabriel Borges\n\nOpen Source Developer | TEP's Data Science Leader | PyPI Package Maintainer | B.Sc. Computer Engineering Student - UPE Recife, Pernambuco, Brasil\n\n## Resumo\n\nAtua como Open Source Developer e é bolsista Líder de Ciência de Dados em PET. Possui familiaridade com ambientes Linux e com conteinerização utilizando Docker. Presta serviços como freelancer, desenvolvendo soluções em Sistemas Embarcados, Desenvolvimento Android, Web Scraping e Inteligência Artificial.\n\nFormação Acadêmica\n\nGraduando em Engenharia da Computação pela Universidade de Pernambuco (UPE).\n\n## Experiência e Habilidades\n\nO interesse por tecnologia teve início na infância, com os primeiros contatos com programação web aos 11 anos, por meio da plataforma Khan Academy. Desde então, foram adquiridos conhecimentos em HTML, CSS, SQL e ProcessingJS. Na adolescência, aprofundou-se em desenvolvimento front-end com JavaScript e, posteriormente, explorou o ambiente Python, ampliando suas competências em projetos voltados à Inteligência Artificial, Web Scraping, aplicações em linha de comando (CLI) e aplicações desktop, utilizando linguagens como Java, C, Python e Cython.\n\nCompetências Técnicas\n\nLinguagens de Programação: Python, Java, JavaScript, C, Cython\n\nFerramentas e Tecnologias: Docker, Linux, Git, GitHub\n\nÁreas de Atuação: Sistemas Embarcados, Android Development, Web Scraping, Inteligência Artificial, Automação, Desenvolvimento Web\n\n## Experiência\n\nFACEPE - Fundação de Amparo à Ciência e Tecnologia do Estado de Pernambuco\n\n4 meses\n\nBolsista de Extensão Tecnológica maio de 2025 - Present (4 meses)\n\nRecife, Pernambuco, Brasil\n\nLíder de Ciência de Dados em PET maio de 2025 - Present (4 meses)\n\nRecife, Pernambuco, Brasil\n\nLíder de Ciência de Dados no Projeto de Extensão Tecnológica \"Inteligência Artificial de Pré-diagnóstico para Auxiliar na Tomada de Decisões em Teleconsultas no CISAM\"\n\nOpen Source\n\nOpen Source Developer | Maintainer of Python packages maio de 2025 - Present (4 meses)\n\nDevelopment, maintenance, and publication of open source Python packages focused on automation, artificial intelligence, and productivity.\n\nHighlighted project: Handmark - a command-line tool (CLI) published on PyPI that converts handwritten notes into Markdown (.md) files using multimodal AI models.\n\nKey responsibilities and contributions:\n\n- Full-cycle development: design, implementation, and testing\n- Package publishing and maintenance on PyPI\n- Technical documentation and usage examples on GitHub\n- Development of a user-friendly command-line interface\n- Integration with external OCR and AI services for accurate handwritten text extraction\n\nOpen to feedback, contributions, and community collaboration.\n\n## Universidade de Pernambuco\n\nMonitor de Linguagem de Programação Imperativa - C março de 2025 - julho de 2025 (5 meses)\n\nRecife, Pernambuco, Brasil\n\nMinistração de aulas sobre conceitos fundamentais da linguagem C, como alocação dinâmica de memória, utilização de ponteiros e structs, além de abordar temas como compilação, runtime errors, compilation errors e otimização de código.\n\nConsultor no desenvolvimento de projetos envolvendo ferramentas como GCC e CMake, criação de aplicações com GTK e portabilidade para as plataformas Linux e Windows.\n\n## Formação acadêmica\n\n## Universidade de Pernambuco\n\nBacharelado em Engenharia, Engenharia de Computação · (abril de 2024 - dezembro de 2028)",
+  "last_updated": "2025-08-05T23:52:18.035726"
+}

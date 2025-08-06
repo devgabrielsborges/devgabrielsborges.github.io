@@ -9,7 +9,9 @@
     "preview": "vite preview",
     "deploy": "npm run build && gh-pages -d dist",
     "update-projects": "node scripts/update-projects.js",
-    "auto-deploy": "npm run update-projects && npm run deploy"
+    "update-cv": "python scripts/process-cv.py",
+    "update-content": "npm run update-cv && npm run update-projects",
+    "auto-deploy": "npm run update-content && npm run deploy"
   },
   "dependencies": {
     "appwrite": "^18.2.0",
