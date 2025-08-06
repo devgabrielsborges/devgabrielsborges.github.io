@@ -602,6 +602,32 @@
         </div>
       </section>
     </main>
+
+    <!-- Floating CTA Button -->
+    <div 
+      v-if="showFloatingButton" 
+      class="floating-cta-container"
+      :class="{ 'hidden': isInContactSection }"
+    >
+      <button 
+        @click="scrollToContact"
+        class="floating-cta-button"
+        aria-label="Ir para seção de contato"
+      >
+        <span class="floating-cta-text">Vamos trabalhar juntos!</span>
+        <svg 
+          class="floating-cta-icon" 
+          width="20" 
+          height="20" 
+          viewBox="0 0 24 24" 
+          fill="none" 
+          stroke="currentColor" 
+          stroke-width="2"
+        >
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10z"></path>
+        </svg>
+      </button>
+    </div>
   </div>
 </template>
 
@@ -610,7 +636,6 @@ import heroImage from '/assets/hero.jpeg'
 import { Client, Functions } from 'appwrite'
 import { useCVContent } from '../lib/useCVContent.js'
 
-// Check if environment variables are available
 const appwriteEndpoint = import.meta.env.VITE_APPWRITE_ENDPOINT
 const appwriteProjectId = import.meta.env.VITE_APPWRITE_PROJECT_ID
 
@@ -665,6 +690,9 @@ export default {
       heroImage,
       latestProjects: [],
       academicPapers: [],
+      showFloatingButton: false,
+      isInContactSection: false,
+      scrollThrottle: null,
       contactForm: {
         name: '',
         email: '',
@@ -680,6 +708,54 @@ export default {
     }
   },
   methods: {
+    throttledHandleScroll() {
+      if (this.scrollThrottle) return;
+      
+      this.scrollThrottle = requestAnimationFrame(() => {
+        this.handleScroll();
+        this.scrollThrottle = null;
+      });
+    },
+    
+    handleScroll() {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const windowHeight = window.innerHeight;
+      
+      const experienceSection = document.querySelector('.projects-section');
+      let hasReachedExperience = false;
+      
+      if (experienceSection) {
+        const experienceRect = experienceSection.getBoundingClientRect();
+        const experienceTop = experienceRect.top + scrollTop;
+        
+        hasReachedExperience = scrollTop + windowHeight > experienceTop + 150;
+      }
+      
+      const contactSection = document.querySelector('.contact-section');
+      let isInContact = false;
+      
+      if (contactSection) {
+        const contactRect = contactSection.getBoundingClientRect();
+        const contactTop = contactRect.top + scrollTop;
+        const contactBottom = contactTop + contactRect.height;
+        
+        isInContact = scrollTop + windowHeight > contactTop - 150;
+      }
+      
+      this.showFloatingButton = hasReachedExperience && !isInContact;
+      this.isInContactSection = isInContact;
+    },
+    
+    scrollToContact() {
+      const contactSection = document.querySelector('.contact-section');
+      if (contactSection) {
+        contactSection.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    },
+    
     validateForm() {
       this.formErrors = {};
       
@@ -864,6 +940,16 @@ export default {
         }
       });
     });
+
+    window.addEventListener('scroll', this.throttledHandleScroll, { passive: true });
+    this.handleScroll();
+  },
+
+  beforeUnmount() {
+    window.removeEventListener('scroll', this.throttledHandleScroll);
+    if (this.scrollThrottle) {
+      cancelAnimationFrame(this.scrollThrottle);
+    }
   },
 };
 </script>
