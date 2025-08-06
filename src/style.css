@@ -1241,3 +1241,107 @@ body {
     padding: 0.8rem;
   }
 }
+
+/* Floating CTA Button */
+.floating-cta-container {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(60px);
+  z-index: 999;
+  opacity: 0;
+  transition: all 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
+.floating-cta-container:not(.hidden) {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+}
+
+.floating-cta-container.hidden {
+  opacity: 0;
+  transform: translateX(-50%) translateY(80px);
+  pointer-events: none;
+}
+
+.floating-cta-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #333 0%, #555 100%);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 1rem 1.5rem;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  text-decoration: none;
+  white-space: nowrap;
+  max-width: 250px;
+  will-change: transform, box-shadow;
+}
+
+.floating-cta-button:hover {
+  background: linear-gradient(135deg, #555 0%, #777 100%);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+.floating-cta-button:active {
+  transform: translateY(-1px) scale(1.01);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.15s ease;
+}
+
+.floating-cta-text {
+  display: block;
+}
+
+.floating-cta-icon {
+  flex-shrink: 0;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.floating-cta-button:hover .floating-cta-icon {
+  transform: translateX(3px) scale(1.1);
+}
+
+/* Floating button mobile responsiveness */
+@media (max-width: 768px) {
+  .floating-cta-container {
+    bottom: 1.5rem;
+  }
+  
+  .floating-cta-button {
+    padding: 0.8rem 1.2rem;
+    font-size: 0.85rem;
+    max-width: 200px;
+  }
+  
+  .floating-cta-text {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .floating-cta-container {
+    bottom: 1rem;
+  }
+  
+  .floating-cta-button {
+    padding: 0.7rem 1rem;
+    font-size: 0.8rem;
+    max-width: 180px;
+  }
+  
+  .floating-cta-text {
+    font-size: 0.8rem;
+  }
+}
