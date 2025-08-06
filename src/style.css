@@ -134,6 +134,10 @@ body {
   margin-bottom: 1rem;
 }
 
+.bio-card h2 {
+  margin-top: 2rem;
+}
+
 .bio-card h3 {
   font-size: 1.4rem;
   font-weight: 600;
@@ -1120,5 +1124,120 @@ body {
     font-size: 0.95rem;
     width: 100%;
     text-align: center;
+  }
+}
+
+/* Dynamic CV Content Styles */
+.loading-state, .error-state {
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.loading-state {
+  background-color: #e3f2fd;
+  color: #1976d2;
+  border: 1px solid #bbdefb;
+}
+
+.error-state {
+  background-color: #fff3e0;
+  color: #f57c00;
+  border: 1px solid #ffcc02;
+}
+
+.skills-section {
+  margin-top: 1rem;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.skill-tag {
+  background: #f8f9fa;
+  color: #333;
+  border: 1px solid #dee2e6;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.skill-tag:hover {
+  background: #e9ecef;
+  border-color: #adb5bd;
+}
+
+.languages-section {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.languages-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.language-tag {
+  background: #f8f9fa;
+  color: #333;
+  border: 1px solid #dee2e6;
+  padding: 0.4rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.language-tag:hover {
+  background: #e9ecef;
+  border-color: #adb5bd;
+}
+
+.education-item {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 10px;
+  border-left: 4px solid #667eea;
+}
+
+.education-item p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.project-company {
+  font-style: italic;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive adjustments for new elements */
+@media (max-width: 768px) {
+  .skills-grid,
+  .languages-grid {
+    gap: 0.4rem;
+  }
+  
+  .skill-tag,
+  .language-tag {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+  }
+  
+  .education-item {
+    padding: 0.8rem;
   }
 }

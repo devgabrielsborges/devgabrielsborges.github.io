@@ -80,25 +80,83 @@
         <div class="container">
           <div class="hero-grid">
             <div class="bio-card">
-              <h2>Gabriel Borges</h2>
-              <p class="location"><strong>Recife, Pernambuco, Brasil</strong></p>
-              <p class="contact-info">
-                <a href="https://linkedin.com/in/devgabrielsborges" target="_blank">linkedin.com/in/devgabrielsborges</a> | 
-                <a href="https://github.com/devgabrielsborges" target="_blank">github.com/devgabrielsborges</a>
-              </p>
-              <h3>Resumo Profissional</h3>
-              <p>
-                Desenvolvedor de Código Aberto e estudante de Engenharia da Computação com sólida experiência em Python, Java e C. 
-                Atualmente, atuo como Líder de Ciência de Dados em um Projeto de Extensão Tecnológica (PET) e mantenho pacotes PyPI. 
-                Possuo familiaridade com ambientes Linux, conteinerização com Docker e desenvolvimento de soluções como freelancer 
-                em Sistemas Embarcados, Desenvolvimento Android, Web Scraping e Inteligência Artificial.
-              </p>
-              <h3>Tecnologias & Ferramentas</h3>
-              <p>
-                <strong>Linguagens:</strong> Python, Java, JavaScript, C, Cython, HTML, CSS, SQL<br>
-                <strong>Ferramentas:</strong> Docker, Linux, Git, GitHub, ProcessingJS<br>
-                <strong>Competências:</strong> Desenvolvimento Open Source, Algoritmos, Web Scraping, IA, Automação, Sistemas Embarcados
-              </p>
+              <div v-if="cvLoading" class="loading-state">
+                <p>📄 Carregando informações do CV...</p>
+              </div>
+              
+              <div v-else-if="cvError" class="error-state">
+                <p>⚠️ Erro ao carregar CV. Usando informações padrão.</p>
+              </div>
+
+              <template v-if="cvContent">
+                <h2>{{ getPersonalInfo(cvContent.personal_info).name }}</h2>
+                <p class="location"><strong>{{ getPersonalInfo(cvContent.personal_info).location }}</strong></p>
+                <p class="contact-info">
+                  <a :href="`https://linkedin.com/in/${getPersonalInfo(cvContent.personal_info).linkedin}`" target="_blank">
+                    linkedin.com/in/{{ getPersonalInfo(cvContent.personal_info).linkedin }}
+                  </a> | 
+                  <a :href="`https://github.com/${getPersonalInfo(cvContent.personal_info).github}`" target="_blank">
+                    github.com/{{ getPersonalInfo(cvContent.personal_info).github }}
+                  </a>
+                </p>
+                
+                <h3>Resumo Profissional</h3>
+                <p>{{ getFormattedSummary(cvContent.summary) }}</p>
+                
+                <h3>Tecnologias & Ferramentas</h3>
+                <div v-if="getSkillsArray(cvContent.skills).length > 0" class="skills-section">
+                  <div class="skills-grid">
+                    <span 
+                      v-for="skill in getSkillsArray(cvContent.skills).slice(0, 12)" 
+                      :key="skill" 
+                      class="skill-tag"
+                    >
+                      {{ skill }}
+                    </span>
+                  </div>
+                </div>
+                <p v-else>
+                  <strong>Linguagens:</strong> Python, Java, JavaScript, C, Cython, HTML, CSS, SQL<br>
+                  <strong>Ferramentas:</strong> Docker, Linux, Git, GitHub, ProcessingJS<br>
+                  <strong>Competências:</strong> Desenvolvimento Open Source, Algoritmos, Web Scraping, IA, Automação, Sistemas Embarcados
+                </p>
+
+                <div v-if="cvContent.languages && cvContent.languages.length > 0" class="languages-section">
+                  <h3>Idiomas</h3>
+                  <div class="languages-grid">
+                    <span 
+                      v-for="lang in cvContent.languages" 
+                      :key="lang.language" 
+                      class="language-tag"
+                    >
+                      {{ lang.language }} ({{ lang.level }})
+                    </span>
+                  </div>
+                </div>
+              </template>
+
+              <!-- Fallback content if CV is not loaded -->
+              <template v-else>
+                <h2>Gabriel Borges</h2>
+                <p class="location"><strong>Recife, Pernambuco, Brasil</strong></p>
+                <p class="contact-info">
+                  <a href="https://linkedin.com/in/devgabrielsborges" target="_blank">linkedin.com/in/devgabrielsborges</a> | 
+                  <a href="https://github.com/devgabrielsborges" target="_blank">github.com/devgabrielsborges</a>
+                </p>
+                <h3>Resumo Profissional</h3>
+                <p>
+                  Desenvolvedor de Código Aberto e estudante de Engenharia da Computação com sólida experiência em Python, Java e C. 
+                  Atualmente, atuo como Líder de Ciência de Dados em um Projeto de Extensão Tecnológica (PET) e mantenho pacotes PyPI. 
+                  Possuo familiaridade com ambientes Linux, conteinerização com Docker e desenvolvimento de soluções como freelancer 
+                  em Sistemas Embarcados, Desenvolvimento Android, Web Scraping e Inteligência Artificial.
+                </p>
+                <h3>Tecnologias & Ferramentas</h3>
+                <p>
+                  <strong>Linguagens:</strong> Python, Java, JavaScript, C, Cython, HTML, CSS, SQL<br>
+                  <strong>Ferramentas:</strong> Docker, Linux, Git, GitHub, ProcessingJS<br>
+                  <strong>Competências:</strong> Desenvolvimento Open Source, Algoritmos, Web Scraping, IA, Automação, Sistemas Embarcados
+                </p>
+              </template>
             </div>
             <div class="hero-card">
               <div class="hero-image-container">
@@ -120,46 +178,82 @@
           </div>
 
           <div class="projects-grid">
-            <div class="project-card">
-              <h3>Bolsista de Extensão Tecnológica & Líder de Ciência de Dados</h3>
-              <p class="project-period">FACEPE | Maio de 2025 – Presente</p>
-              <p>
-                Lidero a frente de Ciência de Dados no Projeto de Extensão Tecnológica 
-                "Inteligência Artificial de Pré-diagnóstico para Auxiliar na Tomada de 
-                Decisões em Teleconsultas no CISAM".
-              </p>
-            </div>
-            <div class="project-card">
-              <h3>Desenvolvedor Open Source & Mantenedor de Pacotes Python</h3>
-              <p class="project-period">Maio de 2025 – Presente</p>
-              <p>
-                Desenvolvo, mantenho e publico pacotes Python de código aberto focados em 
-                automação, IA e produtividade. Projeto em destaque: Handmark - ferramenta 
-                CLI que converte anotações manuscritas em Markdown usando IA multimodal e OCR.
-              </p>
-            </div>
-            <div class="project-card">
-              <h3>Monitor de Linguagem de Programação Imperativa (C)</h3>
-              <p class="project-period">Universidade de Pernambuco | Março de 2025 – Presente</p>
-              <p>
-                Ministro aulas sobre conceitos fundamentais da linguagem C, incluindo 
-                alocação dinâmica de memória, ponteiros, structs, compilação e otimização. 
-                Presto consultoria em projetos com GCC, CMake e aplicações GTK para Linux e Windows.
-              </p>
-            </div>
+            <!-- Dynamic CV Experience -->
+            <template v-if="cvContent && formatExperience(cvContent.experience).length > 0">
+              <div 
+                v-for="exp in formatExperience(cvContent.experience)" 
+                :key="exp.title" 
+                class="project-card"
+              >
+                <h3>{{ exp.title }}</h3>
+                <p v-if="exp.company" class="project-company">{{ exp.company }}</p>
+                <p v-if="exp.period" class="project-period">{{ exp.period }}</p>
+                <p>{{ exp.description }}</p>
+              </div>
+            </template>
+
+            <!-- Fallback experience entries -->
+            <template v-else>
+              <div class="project-card">
+                <h3>Bolsista de Extensão Tecnológica & Líder de Ciência de Dados</h3>
+                <p class="project-period">FACEPE | Maio de 2025 – Presente</p>
+                <p>
+                  Lidero a frente de Ciência de Dados no Projeto de Extensão Tecnológica 
+                  "Inteligência Artificial de Pré-diagnóstico para Auxiliar na Tomada de 
+                  Decisões em Teleconsultas no CISAM".
+                </p>
+              </div>
+              <div class="project-card">
+                <h3>Desenvolvedor Open Source & Mantenedor de Pacotes Python</h3>
+                <p class="project-period">Maio de 2025 – Presente</p>
+                <p>
+                  Desenvolvo, mantenho e publico pacotes Python de código aberto focados em 
+                  automação, IA e produtividade. Projeto em destaque: Handmark - ferramenta 
+                  CLI que converte anotações manuscritas em Markdown usando IA multimodal e OCR.
+                </p>
+              </div>
+              <div class="project-card">
+                <h3>Monitor de Linguagem de Programação Imperativa (C)</h3>
+                <p class="project-period">Universidade de Pernambuco | Março de 2025 – Presente</p>
+                <p>
+                  Ministro aulas sobre conceitos fundamentais da linguagem C, incluindo 
+                  alocação dinâmica de memória, ponteiros, structs, compilação e otimização. 
+                  Presto consultoria em projetos com GCC, CMake e aplicações GTK para Linux e Windows.
+                </p>
+              </div>
+            </template>
           </div>
 
           <div class="latest-projects">
             <h3>Formação Acadêmica & Certificações</h3>
-            <p>
-              <strong>Bacharelado em Engenharia da Computação</strong> - Universidade de Pernambuco (UPE)<br>
-              Abril de 2024 – Dezembro de 2028 (previsão)<br><br>
-              
-              <strong>Certificações:</strong> CS50's Introduction to Computer Science (Harvard), 
-              Figma for Developers v2, API Rest, Lógica de programação básica com Javascript<br><br>
-              
-              <strong>Idiomas:</strong> Português (Nativo), Inglês (Profissional)
-            </p>
+            
+            <template v-if="cvContent && formatEducation(cvContent.education).length > 0">
+              <div 
+                v-for="edu in formatEducation(cvContent.education)" 
+                :key="edu.title" 
+                class="education-item"
+              >
+                <p>
+                  <strong>{{ edu.title }}</strong>
+                  <span v-if="edu.institution"> - {{ edu.institution }}</span><br>
+                  <span v-if="edu.period">{{ edu.period }}</span>
+                  <span v-if="edu.description"><br>{{ edu.description }}</span>
+                </p>
+              </div>
+            </template>
+
+            <!-- Fallback education content -->
+            <template v-else>
+              <p>
+                <strong>Bacharelado em Engenharia da Computação</strong> - Universidade de Pernambuco (UPE)<br>
+                Abril de 2024 – Dezembro de 2028 (previsão)<br><br>
+                
+                <strong>Certificações:</strong> CS50's Introduction to Computer Science (Harvard), 
+                Figma for Developers v2, API Rest, Lógica de programação básica com Javascript<br><br>
+                
+                <strong>Idiomas:</strong> Português (Nativo), Inglês (Profissional)
+              </p>
+            </template>
           </div>
         </div>
       </section>
@@ -514,6 +608,7 @@
 <script>
 import heroImage from '/assets/hero.jpeg'
 import { Client, Functions } from 'appwrite'
+import { useCVContent } from '../lib/useCVContent.js'
 
 // Check if environment variables are available
 const appwriteEndpoint = import.meta.env.VITE_APPWRITE_ENDPOINT
@@ -540,6 +635,31 @@ if (appwriteEndpoint && appwriteProjectId) {
 
 export default {
   name: "Home",
+  setup() {
+    const {
+      cvContent,
+      loading: cvLoading,
+      error: cvError,
+      loadCVContent,
+      formatExperience,
+      formatEducation,
+      getSkillsArray,
+      getPersonalInfo,
+      getFormattedSummary
+    } = useCVContent()
+
+    return {
+      cvContent,
+      cvLoading,
+      cvError,
+      loadCVContent,
+      formatExperience,
+      formatEducation,
+      getSkillsArray,
+      getPersonalInfo,
+      getFormattedSummary
+    }
+  },
   data() {
     return {
       heroImage,
