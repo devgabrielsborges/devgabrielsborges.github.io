@@ -4,12 +4,12 @@
     "description": "LLM based application for creating CVs based on your GitHub and LinkedIn profile",
     "html_url": "https://github.com/devgabrielsborges/autorriculum",
     "homepage": null,
-    "language": "TeX",
+    "language": "TypeScript",
     "topics": [],
-    "updated_at": "2025-08-08T20:02:58Z",
+    "updated_at": "2025-08-09T22:17:21Z",
     "techTags": [
-      "TeX",
-      "TypeScript"
+      "TypeScript",
+      "TeX"
     ]
   },
   {
