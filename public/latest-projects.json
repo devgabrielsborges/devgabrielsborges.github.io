@@ -4,14 +4,14 @@
     "description": "algorithms studies",
     "html_url": "https://github.com/devgabrielsborges/algorithms",
     "homepage": null,
-    "language": "C",
+    "language": "TypeScript",
     "topics": [],
-    "updated_at": "2025-08-28T00:34:18Z",
+    "updated_at": "2025-09-04T10:27:32Z",
     "techTags": [
+      "TypeScript",
       "C",
       "Java",
-      "JavaScript",
-      "Python"
+      "JavaScript"
     ]
   },
   {
