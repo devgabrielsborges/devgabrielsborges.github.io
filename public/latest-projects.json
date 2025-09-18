@@ -1,5 +1,15 @@
 [
   {
+    "name": "filesearch",
+    "description": "Filesearch implementation using Deque, Stack, and Deboucing ",
+    "html_url": "https://github.com/devgabrielsborges/filesearch",
+    "homepage": null,
+    "language": null,
+    "topics": [],
+    "updated_at": "2025-09-17T21:01:58Z",
+    "techTags": []
+  },
+  {
     "name": "algorithms",
     "description": "algorithms studies",
     "html_url": "https://github.com/devgabrielsborges/algorithms",
@@ -25,18 +35,6 @@
     "techTags": [
       "TypeScript",
       "TeX"
-    ]
-  },
-  {
-    "name": "bullet-mcp-server",
-    "description": "A Model Context Protocol (MCP) server that provides physics simulation capabilities using PyBullet. This server allows external applications to interact with PyBullet physics simulations through standardized MCP protocol endpoints.",
-    "html_url": "https://github.com/devgabrielsborges/bullet-mcp-server",
-    "homepage": null,
-    "language": "Python",
-    "topics": [],
-    "updated_at": "2025-07-30T02:51:41Z",
-    "techTags": [
-      "Python"
     ]
   }
 ]
