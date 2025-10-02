@@ -1,5 +1,20 @@
 [
   {
+    "name": "algorithms",
+    "description": "algorithms studies",
+    "html_url": "https://github.com/devgabrielsborges/algorithms",
+    "homepage": null,
+    "language": "TypeScript",
+    "topics": [],
+    "updated_at": "2025-10-02T00:19:24Z",
+    "techTags": [
+      "TypeScript",
+      "C",
+      "Java",
+      "JavaScript"
+    ]
+  },
+  {
     "name": "filesearch",
     "description": "Filesearch implementation using Deque, Stack, and Deboucing ",
     "html_url": "https://github.com/devgabrielsborges/filesearch",
@@ -12,21 +27,6 @@
       "TypeScript",
       "CSS",
       "HTML"
-    ]
-  },
-  {
-    "name": "algorithms",
-    "description": "algorithms studies",
-    "html_url": "https://github.com/devgabrielsborges/algorithms",
-    "homepage": null,
-    "language": "TypeScript",
-    "topics": [],
-    "updated_at": "2025-09-04T10:27:32Z",
-    "techTags": [
-      "TypeScript",
-      "C",
-      "Java",
-      "JavaScript"
     ]
   },
   {
