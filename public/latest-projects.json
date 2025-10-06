@@ -1,5 +1,17 @@
 [
   {
+    "name": "anomaly-detection-c2beaconing-fl",
+    "description": "Anomaly Detection in C2 Beaconing Traffic Using Privacy Preserving Federated Learning",
+    "html_url": "https://github.com/devgabrielsborges/anomaly-detection-c2beaconing-fl",
+    "homepage": null,
+    "language": "Python",
+    "topics": [],
+    "updated_at": "2025-10-05T18:11:29Z",
+    "techTags": [
+      "Python"
+    ]
+  },
+  {
     "name": "algorithms",
     "description": "algorithms studies",
     "html_url": "https://github.com/devgabrielsborges/algorithms",
@@ -27,19 +39,6 @@
       "TypeScript",
       "CSS",
       "HTML"
-    ]
-  },
-  {
-    "name": "autorriculum",
-    "description": "LLM based application for creating CVs based on your GitHub and LinkedIn profile",
-    "html_url": "https://github.com/devgabrielsborges/autorriculum",
-    "homepage": null,
-    "language": "TypeScript",
-    "topics": [],
-    "updated_at": "2025-08-09T22:17:21Z",
-    "techTags": [
-      "TypeScript",
-      "TeX"
     ]
   }
 ]
