@@ -1,5 +1,20 @@
 [
   {
+    "name": "filesearch",
+    "description": "Filesearch implementation using Deque, Stack, and Deboucing ",
+    "html_url": "https://github.com/devgabrielsborges/filesearch",
+    "homepage": null,
+    "language": "Vue",
+    "topics": [],
+    "updated_at": "2025-10-09T01:24:05Z",
+    "techTags": [
+      "Vue",
+      "TypeScript",
+      "CSS",
+      "HTML"
+    ]
+  },
+  {
     "name": "anomaly-detection-c2beaconing-fl",
     "description": "Anomaly Detection in C2 Beaconing Traffic Using Privacy Preserving Federated Learning",
     "html_url": "https://github.com/devgabrielsborges/anomaly-detection-c2beaconing-fl",
@@ -24,21 +39,6 @@
       "C",
       "Java",
       "JavaScript"
-    ]
-  },
-  {
-    "name": "filesearch",
-    "description": "Filesearch implementation using Deque, Stack, and Deboucing ",
-    "html_url": "https://github.com/devgabrielsborges/filesearch",
-    "homepage": null,
-    "language": "Vue",
-    "topics": [],
-    "updated_at": "2025-09-26T03:13:07Z",
-    "techTags": [
-      "Vue",
-      "TypeScript",
-      "CSS",
-      "HTML"
     ]
   }
 ]
