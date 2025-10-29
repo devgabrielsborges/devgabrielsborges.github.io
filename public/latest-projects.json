@@ -1,5 +1,28 @@
 [
   {
+    "name": "dynamic_clustering_fl_health_conditions",
+    "description": "Dynamic Clustering Federated Learning in Concept Drift Scenarios on Health Conditions",
+    "html_url": "https://github.com/devgabrielsborges/dynamic_clustering_fl_health_conditions",
+    "homepage": null,
+    "language": null,
+    "topics": [],
+    "updated_at": "2025-10-28T23:43:17Z",
+    "techTags": []
+  },
+  {
+    "name": "anomaly-detection-c2beaconing-fl",
+    "description": "Anomaly Detection in C2 Beaconing Traffic Using Privacy Preserving Federated Learning",
+    "html_url": "https://github.com/devgabrielsborges/anomaly-detection-c2beaconing-fl",
+    "homepage": null,
+    "language": "Jupyter Notebook",
+    "topics": [],
+    "updated_at": "2025-10-28T23:35:41Z",
+    "techTags": [
+      "Jupyter Notebook",
+      "Python"
+    ]
+  },
+  {
     "name": "filewatcher",
     "description": "Watcher for trigger functions or routines ",
     "html_url": "https://github.com/devgabrielsborges/filewatcher",
@@ -7,33 +30,6 @@
     "language": "Python",
     "topics": [],
     "updated_at": "2025-10-17T01:15:58Z",
-    "techTags": [
-      "Python"
-    ]
-  },
-  {
-    "name": "filesearch",
-    "description": "Filesearch implementation using Deque, Stack, and Deboucing ",
-    "html_url": "https://github.com/devgabrielsborges/filesearch",
-    "homepage": null,
-    "language": "Vue",
-    "topics": [],
-    "updated_at": "2025-10-09T01:24:05Z",
-    "techTags": [
-      "Vue",
-      "TypeScript",
-      "CSS",
-      "HTML"
-    ]
-  },
-  {
-    "name": "anomaly-detection-c2beaconing-fl",
-    "description": "Anomaly Detection in C2 Beaconing Traffic Using Privacy Preserving Federated Learning",
-    "html_url": "https://github.com/devgabrielsborges/anomaly-detection-c2beaconing-fl",
-    "homepage": null,
-    "language": "Python",
-    "topics": [],
-    "updated_at": "2025-10-05T18:11:29Z",
     "techTags": [
       "Python"
     ]
