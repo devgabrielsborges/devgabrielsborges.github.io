@@ -1,5 +1,18 @@
 [
   {
+    "name": "anomaly-detection-c2beaconing-fl",
+    "description": "Anomaly Detection in C2 Beaconing Traffic Using Privacy Preserving Federated Learning",
+    "html_url": "https://github.com/devgabrielsborges/anomaly-detection-c2beaconing-fl",
+    "homepage": null,
+    "language": "Jupyter Notebook",
+    "topics": [],
+    "updated_at": "2025-11-05T11:25:17Z",
+    "techTags": [
+      "Jupyter Notebook",
+      "Python"
+    ]
+  },
+  {
     "name": "dynamic_clustering_fl_health_conditions",
     "description": "Dynamic Clustering Federated Learning in Concept Drift Scenarios on Health Conditions",
     "html_url": "https://github.com/devgabrielsborges/dynamic_clustering_fl_health_conditions",
@@ -8,19 +21,6 @@
     "topics": [],
     "updated_at": "2025-10-28T23:43:17Z",
     "techTags": []
-  },
-  {
-    "name": "anomaly-detection-c2beaconing-fl",
-    "description": "Anomaly Detection in C2 Beaconing Traffic Using Privacy Preserving Federated Learning",
-    "html_url": "https://github.com/devgabrielsborges/anomaly-detection-c2beaconing-fl",
-    "homepage": null,
-    "language": "Jupyter Notebook",
-    "topics": [],
-    "updated_at": "2025-10-28T23:35:41Z",
-    "techTags": [
-      "Jupyter Notebook",
-      "Python"
-    ]
   },
   {
     "name": "filewatcher",
