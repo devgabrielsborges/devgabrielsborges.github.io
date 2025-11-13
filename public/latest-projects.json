@@ -1,12 +1,27 @@
 [
   {
+    "name": "algorithms",
+    "description": "algorithms studies",
+    "html_url": "https://github.com/devgabrielsborges/algorithms",
+    "homepage": null,
+    "language": "TypeScript",
+    "topics": [],
+    "updated_at": "2025-11-13T02:57:06Z",
+    "techTags": [
+      "TypeScript",
+      "C",
+      "Java",
+      "JavaScript"
+    ]
+  },
+  {
     "name": "anomaly-detection-c2beaconing-fl",
     "description": "Anomaly Detection in C2 Beaconing Traffic Using Privacy Preserving Federated Learning",
     "html_url": "https://github.com/devgabrielsborges/anomaly-detection-c2beaconing-fl",
     "homepage": null,
     "language": "Jupyter Notebook",
     "topics": [],
-    "updated_at": "2025-11-07T00:44:03Z",
+    "updated_at": "2025-11-13T01:20:11Z",
     "techTags": [
       "Jupyter Notebook",
       "Python"
@@ -17,19 +32,9 @@
     "description": "Dynamic Clustering Federated Learning in Concept Drift Scenarios on Health Conditions",
     "html_url": "https://github.com/devgabrielsborges/dynamic_clustering_fl_health_conditions",
     "homepage": null,
-    "language": null,
-    "topics": [],
-    "updated_at": "2025-10-28T23:43:17Z",
-    "techTags": []
-  },
-  {
-    "name": "filewatcher",
-    "description": "Watcher for trigger functions or routines ",
-    "html_url": "https://github.com/devgabrielsborges/filewatcher",
-    "homepage": null,
     "language": "Python",
     "topics": [],
-    "updated_at": "2025-10-17T01:15:58Z",
+    "updated_at": "2025-11-13T00:37:50Z",
     "techTags": [
       "Python"
     ]
