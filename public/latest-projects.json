@@ -1,5 +1,17 @@
 [
   {
+    "name": "qlearning",
+    "description": "QLearning Reinforcement Learning Algorithm Implementation",
+    "html_url": "https://github.com/devgabrielsborges/qlearning",
+    "homepage": null,
+    "language": "Python",
+    "topics": [],
+    "updated_at": "2025-11-22T19:45:15Z",
+    "techTags": [
+      "Python"
+    ]
+  },
+  {
     "name": "algorithms",
     "description": "algorithms studies",
     "html_url": "https://github.com/devgabrielsborges/algorithms",
@@ -24,18 +36,6 @@
     "updated_at": "2025-11-13T01:20:11Z",
     "techTags": [
       "Jupyter Notebook",
-      "Python"
-    ]
-  },
-  {
-    "name": "dynamic_clustering_fl_health_conditions",
-    "description": "Dynamic Clustering Federated Learning in Concept Drift Scenarios on Health Conditions",
-    "html_url": "https://github.com/devgabrielsborges/dynamic_clustering_fl_health_conditions",
-    "homepage": null,
-    "language": "Python",
-    "topics": [],
-    "updated_at": "2025-11-13T00:37:50Z",
-    "techTags": [
       "Python"
     ]
   }
