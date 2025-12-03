@@ -1,5 +1,19 @@
 [
   {
+    "name": "knowledge_graphs",
+    "description": "Knowledge Graphs project",
+    "html_url": "https://github.com/devgabrielsborges/knowledge_graphs",
+    "homepage": null,
+    "language": "TypeScript",
+    "topics": [],
+    "updated_at": "2025-12-03T03:14:24Z",
+    "techTags": [
+      "TypeScript",
+      "JavaScript",
+      "CSS"
+    ]
+  },
+  {
     "name": "anomaly-detection-c2beaconing-fl",
     "description": "Anomaly Detection in C2 Beaconing Traffic Using Privacy Preserving Federated Learning",
     "html_url": "https://github.com/devgabrielsborges/anomaly-detection-c2beaconing-fl",
@@ -22,21 +36,6 @@
     "updated_at": "2025-11-22T19:45:15Z",
     "techTags": [
       "Python"
-    ]
-  },
-  {
-    "name": "algorithms",
-    "description": "algorithms studies",
-    "html_url": "https://github.com/devgabrielsborges/algorithms",
-    "homepage": null,
-    "language": "TypeScript",
-    "topics": [],
-    "updated_at": "2025-11-16T01:50:45Z",
-    "techTags": [
-      "TypeScript",
-      "Java",
-      "C",
-      "JavaScript"
     ]
   }
 ]
