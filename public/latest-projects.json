@@ -1,5 +1,15 @@
 [
   {
+    "name": "kaggle_house_prices_competition",
+    "description": "Repo for keeping files for Kaggle House Prices prediction competition",
+    "html_url": "https://github.com/devgabrielsborges/kaggle_house_prices_competition",
+    "homepage": null,
+    "language": null,
+    "topics": [],
+    "updated_at": "2026-01-01T22:17:38Z",
+    "techTags": []
+  },
+  {
     "name": "knowledge_graphs",
     "description": "Knowledge Graphs project",
     "html_url": "https://github.com/devgabrielsborges/knowledge_graphs",
@@ -23,18 +33,6 @@
     "updated_at": "2025-11-29T02:00:13Z",
     "techTags": [
       "Jupyter Notebook",
-      "Python"
-    ]
-  },
-  {
-    "name": "qlearning",
-    "description": "QLearning Reinforcement Learning Algorithm Implementation",
-    "html_url": "https://github.com/devgabrielsborges/qlearning",
-    "homepage": null,
-    "language": "Python",
-    "topics": [],
-    "updated_at": "2025-11-22T19:45:15Z",
-    "techTags": [
       "Python"
     ]
   }
