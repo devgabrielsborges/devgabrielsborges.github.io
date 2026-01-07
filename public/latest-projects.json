@@ -1,39 +1,37 @@
 [
   {
-    "name": "kaggle_house_prices_competition",
-    "description": "Repo for keeping files for Kaggle House Prices prediction competition",
-    "html_url": "https://github.com/devgabrielsborges/kaggle_house_prices_competition",
-    "homepage": null,
-    "language": null,
-    "topics": [],
-    "updated_at": "2026-01-01T22:17:38Z",
-    "techTags": []
-  },
-  {
-    "name": "knowledge_graphs",
-    "description": "Knowledge Graphs project",
-    "html_url": "https://github.com/devgabrielsborges/knowledge_graphs",
-    "homepage": null,
-    "language": "TypeScript",
-    "topics": [],
-    "updated_at": "2025-12-03T03:14:24Z",
-    "techTags": [
-      "TypeScript",
-      "JavaScript",
-      "CSS"
-    ]
-  },
-  {
-    "name": "anomaly-detection-c2beaconing-fl",
-    "description": "Anomaly Detection in C2 Beaconing Traffic Using Privacy Preserving Federated Learning",
-    "html_url": "https://github.com/devgabrielsborges/anomaly-detection-c2beaconing-fl",
+    "name": "fcca_fl",
+    "description": "FCCA implementation for Federated Learning",
+    "html_url": "https://github.com/devgabrielsborges/fcca_fl",
     "homepage": null,
     "language": "Jupyter Notebook",
     "topics": [],
-    "updated_at": "2025-11-29T02:00:13Z",
+    "updated_at": "2026-01-07T01:14:11Z",
     "techTags": [
       "Jupyter Notebook",
       "Python"
+    ]
+  },
+  {
+    "name": "fcca",
+    "description": "FCCA implementation for Federated Learning",
+    "html_url": "https://github.com/devgabrielsborges/fcca",
+    "homepage": null,
+    "language": null,
+    "topics": [],
+    "updated_at": "2026-01-07T00:27:58Z",
+    "techTags": []
+  },
+  {
+    "name": "housing",
+    "description": "A comparison in house price classification with LogisticRegression, SVM, DecisionTree, GradientBoosting and XGBoost",
+    "html_url": "https://github.com/devgabrielsborges/housing",
+    "homepage": null,
+    "language": "Jupyter Notebook",
+    "topics": [],
+    "updated_at": "2026-01-06T15:17:16Z",
+    "techTags": [
+      "Jupyter Notebook"
     ]
   }
 ]
