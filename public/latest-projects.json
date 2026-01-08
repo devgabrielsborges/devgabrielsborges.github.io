@@ -1,5 +1,19 @@
 [
   {
+    "name": "anomaly-detection-c2beaconing-fl",
+    "description": "Anomaly Detection in C2 Beaconing Traffic Using Privacy Preserving Federated Learning",
+    "html_url": "https://github.com/devgabrielsborges/anomaly-detection-c2beaconing-fl",
+    "homepage": null,
+    "language": "Jupyter Notebook",
+    "topics": [],
+    "updated_at": "2026-01-07T23:10:27Z",
+    "techTags": [
+      "Jupyter Notebook",
+      "Python",
+      "Shell"
+    ]
+  },
+  {
     "name": "fcca_fl",
     "description": "FCCA implementation for Federated Learning",
     "html_url": "https://github.com/devgabrielsborges/fcca_fl",
@@ -11,16 +25,6 @@
       "Jupyter Notebook",
       "Python"
     ]
-  },
-  {
-    "name": "fcca",
-    "description": "FCCA implementation for Federated Learning",
-    "html_url": "https://github.com/devgabrielsborges/fcca",
-    "homepage": null,
-    "language": null,
-    "topics": [],
-    "updated_at": "2026-01-07T00:27:58Z",
-    "techTags": []
   },
   {
     "name": "housing",
