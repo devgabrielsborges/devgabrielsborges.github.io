@@ -1,5 +1,18 @@
 [
   {
+    "name": "Space-Invaders-QLearning",
+    "description": "Reinforcement Learning approach with QLearning algorithm in Space Invaders game",
+    "html_url": "https://github.com/devgabrielsborges/Space-Invaders-QLearning",
+    "homepage": null,
+    "language": "Python",
+    "topics": [],
+    "updated_at": "2026-01-08T22:37:56Z",
+    "techTags": [
+      "Python",
+      "Shell"
+    ]
+  },
+  {
     "name": "anomaly-detection-c2beaconing-fl",
     "description": "Anomaly Detection in C2 Beaconing Traffic Using Privacy Preserving Federated Learning",
     "html_url": "https://github.com/devgabrielsborges/anomaly-detection-c2beaconing-fl",
@@ -24,18 +37,6 @@
     "techTags": [
       "Jupyter Notebook",
       "Python"
-    ]
-  },
-  {
-    "name": "housing",
-    "description": "A comparison in house price classification with LogisticRegression, SVM, DecisionTree, GradientBoosting and XGBoost",
-    "html_url": "https://github.com/devgabrielsborges/housing",
-    "homepage": null,
-    "language": "Jupyter Notebook",
-    "topics": [],
-    "updated_at": "2026-01-06T15:17:16Z",
-    "techTags": [
-      "Jupyter Notebook"
     ]
   }
 ]
