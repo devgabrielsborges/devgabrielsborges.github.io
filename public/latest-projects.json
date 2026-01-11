@@ -1,5 +1,18 @@
 [
   {
+    "name": "titanic",
+    "description": "Titanic - Machine Learning from Disaster",
+    "html_url": "https://github.com/devgabrielsborges/titanic",
+    "homepage": null,
+    "language": "Jupyter Notebook",
+    "topics": [],
+    "updated_at": "2026-01-11T02:52:29Z",
+    "techTags": [
+      "Jupyter Notebook",
+      "Python"
+    ]
+  },
+  {
     "name": "Space-Invaders-QLearning",
     "description": "Reinforcement Learning approach with QLearning algorithm in Space Invaders game",
     "html_url": "https://github.com/devgabrielsborges/Space-Invaders-QLearning",
@@ -24,19 +37,6 @@
       "Jupyter Notebook",
       "Python",
       "Shell"
-    ]
-  },
-  {
-    "name": "fcca_fl",
-    "description": "FCCA implementation for Federated Learning",
-    "html_url": "https://github.com/devgabrielsborges/fcca_fl",
-    "homepage": null,
-    "language": "Jupyter Notebook",
-    "topics": [],
-    "updated_at": "2026-01-07T01:14:11Z",
-    "techTags": [
-      "Jupyter Notebook",
-      "Python"
     ]
   }
 ]
