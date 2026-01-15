@@ -1,5 +1,17 @@
 [
   {
+    "name": "dynamic_clustering_fl_health_conditions",
+    "description": "Dynamic Clustering Federated Learning in Concept Drift Scenarios on Health Conditions",
+    "html_url": "https://github.com/devgabrielsborges/dynamic_clustering_fl_health_conditions",
+    "homepage": null,
+    "language": "Python",
+    "topics": [],
+    "updated_at": "2026-01-15T01:48:42Z",
+    "techTags": [
+      "Python"
+    ]
+  },
+  {
     "name": "titanic",
     "description": "Titanic - Machine Learning from Disaster",
     "html_url": "https://github.com/devgabrielsborges/titanic",
@@ -21,20 +33,6 @@
     "topics": [],
     "updated_at": "2026-01-08T22:37:56Z",
     "techTags": [
-      "Python",
-      "Shell"
-    ]
-  },
-  {
-    "name": "anomaly-detection-c2beaconing-fl",
-    "description": "Anomaly Detection in C2 Beaconing Traffic Using Privacy Preserving Federated Learning",
-    "html_url": "https://github.com/devgabrielsborges/anomaly-detection-c2beaconing-fl",
-    "homepage": null,
-    "language": "Jupyter Notebook",
-    "topics": [],
-    "updated_at": "2026-01-07T23:10:27Z",
-    "techTags": [
-      "Jupyter Notebook",
       "Python",
       "Shell"
     ]
