@@ -1,5 +1,18 @@
 [
   {
+    "name": "german_credit",
+    "description": "Projeto em desenvolvimento ativo no GitHub.",
+    "html_url": "https://github.com/devgabrielsborges/german_credit",
+    "homepage": null,
+    "language": "Jupyter Notebook",
+    "topics": [],
+    "updated_at": "2026-01-26T22:16:00Z",
+    "techTags": [
+      "Jupyter Notebook",
+      "Python"
+    ]
+  },
+  {
     "name": "dynamic_clustering_fl_health_conditions",
     "description": "Dynamic Clustering Federated Learning in Concept Drift Scenarios on Health Conditions",
     "html_url": "https://github.com/devgabrielsborges/dynamic_clustering_fl_health_conditions",
@@ -22,19 +35,6 @@
     "techTags": [
       "Jupyter Notebook",
       "Python"
-    ]
-  },
-  {
-    "name": "Space-Invaders-QLearning",
-    "description": "Reinforcement Learning approach with QLearning algorithm in Space Invaders game",
-    "html_url": "https://github.com/devgabrielsborges/Space-Invaders-QLearning",
-    "homepage": null,
-    "language": "Python",
-    "topics": [],
-    "updated_at": "2026-01-08T22:37:56Z",
-    "techTags": [
-      "Python",
-      "Shell"
     ]
   }
 ]
