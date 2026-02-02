@@ -1,5 +1,17 @@
 [
   {
+    "name": "dynamic_clustering_fl_health_conditions",
+    "description": "Dynamic Clustering Federated Learning in Concept Drift Scenarios on Health Conditions",
+    "html_url": "https://github.com/devgabrielsborges/dynamic_clustering_fl_health_conditions",
+    "homepage": null,
+    "language": "Python",
+    "topics": [],
+    "updated_at": "2026-02-02T00:49:16Z",
+    "techTags": [
+      "Python"
+    ]
+  },
+  {
     "name": "german_credit",
     "description": "Projeto em desenvolvimento ativo no GitHub.",
     "html_url": "https://github.com/devgabrielsborges/german_credit",
@@ -9,18 +21,6 @@
     "updated_at": "2026-01-26T22:16:00Z",
     "techTags": [
       "Jupyter Notebook",
-      "Python"
-    ]
-  },
-  {
-    "name": "dynamic_clustering_fl_health_conditions",
-    "description": "Dynamic Clustering Federated Learning in Concept Drift Scenarios on Health Conditions",
-    "html_url": "https://github.com/devgabrielsborges/dynamic_clustering_fl_health_conditions",
-    "homepage": null,
-    "language": "Python",
-    "topics": [],
-    "updated_at": "2026-01-17T02:32:48Z",
-    "techTags": [
       "Python"
     ]
   },
