@@ -1,5 +1,17 @@
 [
   {
+    "name": "Carpenter",
+    "description": "Carpenter is a job scraping tool that extracts job listings from Jobrapido and Glassdoor. It allows users to search for job titles and export the results.",
+    "html_url": "https://github.com/devgabrielsborges/Carpenter",
+    "homepage": "",
+    "language": "Python",
+    "topics": [],
+    "updated_at": "2026-02-06T02:59:13Z",
+    "techTags": [
+      "Python"
+    ]
+  },
+  {
     "name": "german_credit",
     "description": "Regression task for predicting credit score based on german guidelines",
     "html_url": "https://github.com/devgabrielsborges/german_credit",
@@ -21,19 +33,6 @@
     "topics": [],
     "updated_at": "2026-02-02T00:49:16Z",
     "techTags": [
-      "Python"
-    ]
-  },
-  {
-    "name": "titanic",
-    "description": "Titanic - Machine Learning from Disaster",
-    "html_url": "https://github.com/devgabrielsborges/titanic",
-    "homepage": null,
-    "language": "Jupyter Notebook",
-    "topics": [],
-    "updated_at": "2026-01-11T02:52:29Z",
-    "techTags": [
-      "Jupyter Notebook",
       "Python"
     ]
   }
