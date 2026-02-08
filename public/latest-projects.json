@@ -1,5 +1,17 @@
 [
   {
+    "name": "dynamic_clustering_fl_health_conditions",
+    "description": "Dynamic Clustering Federated Learning in Concept Drift Scenarios on Health Conditions",
+    "html_url": "https://github.com/devgabrielsborges/dynamic_clustering_fl_health_conditions",
+    "homepage": null,
+    "language": "Python",
+    "topics": [],
+    "updated_at": "2026-02-07T22:05:32Z",
+    "techTags": [
+      "Python"
+    ]
+  },
+  {
     "name": "Carpenter",
     "description": "Carpenter is a job scraping tool that extracts job listings from Jobrapido and Glassdoor. It allows users to search for job titles and export the results.",
     "html_url": "https://github.com/devgabrielsborges/Carpenter",
@@ -21,18 +33,6 @@
     "updated_at": "2026-02-04T18:00:46Z",
     "techTags": [
       "Jupyter Notebook",
-      "Python"
-    ]
-  },
-  {
-    "name": "dynamic_clustering_fl_health_conditions",
-    "description": "Dynamic Clustering Federated Learning in Concept Drift Scenarios on Health Conditions",
-    "html_url": "https://github.com/devgabrielsborges/dynamic_clustering_fl_health_conditions",
-    "homepage": null,
-    "language": "Python",
-    "topics": [],
-    "updated_at": "2026-02-02T00:49:16Z",
-    "techTags": [
       "Python"
     ]
   }
