@@ -1,5 +1,19 @@
 [
   {
+    "name": "mlflow_agent_tracking",
+    "description": "A comprehensive framework for tracking, evaluating, and managing LLM agents using MLflow. This project provides end-to-end pipelines for dataset preprocessing, prompt management, model evaluation, and experiment tracking",
+    "html_url": "https://github.com/devgabrielsborges/mlflow_agent_tracking",
+    "homepage": null,
+    "language": "Python",
+    "topics": [],
+    "updated_at": "2026-02-10T18:42:54Z",
+    "techTags": [
+      "Python",
+      "Makefile",
+      "Mermaid"
+    ]
+  },
+  {
     "name": "dynamic_clustering_fl_health_conditions",
     "description": "Dynamic Clustering Federated Learning in Concept Drift Scenarios on Health Conditions",
     "html_url": "https://github.com/devgabrielsborges/dynamic_clustering_fl_health_conditions",
@@ -20,19 +34,6 @@
     "topics": [],
     "updated_at": "2026-02-06T02:59:13Z",
     "techTags": [
-      "Python"
-    ]
-  },
-  {
-    "name": "german_credit",
-    "description": "Regression task for predicting credit score based on german guidelines",
-    "html_url": "https://github.com/devgabrielsborges/german_credit",
-    "homepage": "",
-    "language": "Jupyter Notebook",
-    "topics": [],
-    "updated_at": "2026-02-04T18:00:46Z",
-    "techTags": [
-      "Jupyter Notebook",
       "Python"
     ]
   }
