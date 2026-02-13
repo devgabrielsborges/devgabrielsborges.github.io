@@ -1,5 +1,17 @@
 [
   {
+    "name": "weni_agent_team_example",
+    "description": "Projeto em desenvolvimento ativo no GitHub.",
+    "html_url": "https://github.com/devgabrielsborges/weni_agent_team_example",
+    "homepage": null,
+    "language": "Python",
+    "topics": [],
+    "updated_at": "2026-02-12T16:15:30Z",
+    "techTags": [
+      "Python"
+    ]
+  },
+  {
     "name": "mlflow_agent_tracking",
     "description": "A comprehensive framework for tracking, evaluating, and managing LLM agents using MLflow. This project provides end-to-end pipelines for dataset preprocessing, prompt management, model evaluation, and experiment tracking",
     "html_url": "https://github.com/devgabrielsborges/mlflow_agent_tracking",
@@ -21,18 +33,6 @@
     "language": "Python",
     "topics": [],
     "updated_at": "2026-02-07T22:05:32Z",
-    "techTags": [
-      "Python"
-    ]
-  },
-  {
-    "name": "Carpenter",
-    "description": "Carpenter is a job scraping tool that extracts job listings from Jobrapido and Glassdoor. It allows users to search for job titles and export the results.",
-    "html_url": "https://github.com/devgabrielsborges/Carpenter",
-    "homepage": "",
-    "language": "Python",
-    "topics": [],
-    "updated_at": "2026-02-06T02:59:13Z",
     "techTags": [
       "Python"
     ]
