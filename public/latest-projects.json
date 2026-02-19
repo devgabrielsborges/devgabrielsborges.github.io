@@ -1,5 +1,19 @@
 [
   {
+    "name": "predicting_heart_disease",
+    "description": "Predicting Heart Disease Kaggle Competition",
+    "html_url": "https://github.com/devgabrielsborges/predicting_heart_disease",
+    "homepage": null,
+    "language": "Python",
+    "topics": [],
+    "updated_at": "2026-02-18T14:21:45Z",
+    "techTags": [
+      "Python",
+      "Makefile",
+      "Jupyter Notebook"
+    ]
+  },
+  {
     "name": "spaceship_titanic_kaggle",
     "description": "Spaceship Titanic Competition ",
     "html_url": "https://github.com/devgabrielsborges/spaceship_titanic_kaggle",
@@ -25,20 +39,6 @@
       "Python",
       "Makefile",
       "Jupyter Notebook"
-    ]
-  },
-  {
-    "name": "student_test_scores",
-    "description": "Projeto em desenvolvimento ativo no GitHub.",
-    "html_url": "https://github.com/devgabrielsborges/student_test_scores",
-    "homepage": null,
-    "language": "Jupyter Notebook",
-    "topics": [],
-    "updated_at": "2026-02-16T03:21:41Z",
-    "techTags": [
-      "Jupyter Notebook",
-      "Python",
-      "Makefile"
     ]
   }
 ]
