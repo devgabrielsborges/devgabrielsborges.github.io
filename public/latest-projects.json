@@ -1,28 +1,28 @@
 [
   {
-    "name": "march_machine_learning_mania_2026",
-    "description": "March Machine Learning Mania 2026",
-    "html_url": "https://github.com/devgabrielsborges/march_machine_learning_mania_2026",
+    "name": "ralph_codex",
+    "description": "Ralph Loops on Codex",
+    "html_url": "https://github.com/devgabrielsborges/ralph_codex",
     "homepage": null,
-    "language": "Python",
+    "language": "Shell",
     "topics": [],
-    "updated_at": "2026-03-06T14:57:29Z",
+    "updated_at": "2026-03-07T17:07:22Z",
     "techTags": [
-      "Python",
-      "Makefile"
+      "Shell",
+      "Dockerfile"
     ]
   },
   {
-    "name": "predict_customer_churn",
-    "description": "Predict Customer Churn Kaggle Competition",
-    "html_url": "https://github.com/devgabrielsborges/predict_customer_churn",
+    "name": "autorriculum",
+    "description": "LLM based application for creating CVs based on your GitHub and LinkedIn profile",
+    "html_url": "https://github.com/devgabrielsborges/autorriculum",
     "homepage": null,
-    "language": "Python",
+    "language": "TypeScript",
     "topics": [],
-    "updated_at": "2026-03-06T01:41:39Z",
+    "updated_at": "2026-03-07T17:03:51Z",
     "techTags": [
-      "Python",
-      "Makefile"
+      "TypeScript",
+      "TeX"
     ]
   },
   {
@@ -32,7 +32,7 @@
     "homepage": null,
     "language": "Python",
     "topics": [],
-    "updated_at": "2026-03-05T20:43:31Z",
+    "updated_at": "2026-03-07T13:13:20Z",
     "techTags": [
       "Python",
       "Makefile"
