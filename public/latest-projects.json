@@ -1,5 +1,18 @@
 [
   {
+    "name": "ralph_codex",
+    "description": "Ralph Loops on Codex",
+    "html_url": "https://github.com/devgabrielsborges/ralph_codex",
+    "homepage": null,
+    "language": "Shell",
+    "topics": [],
+    "updated_at": "2026-03-13T18:22:23Z",
+    "techTags": [
+      "Shell",
+      "Dockerfile"
+    ]
+  },
+  {
     "name": "fipex",
     "description": "FIPE Values EDA and model training",
     "html_url": "https://github.com/devgabrielsborges/fipex",
@@ -10,19 +23,6 @@
     "techTags": [
       "Python",
       "Makefile"
-    ]
-  },
-  {
-    "name": "ralph_codex",
-    "description": "Ralph Loops on Codex",
-    "html_url": "https://github.com/devgabrielsborges/ralph_codex",
-    "homepage": null,
-    "language": "Shell",
-    "topics": [],
-    "updated_at": "2026-03-07T17:07:22Z",
-    "techTags": [
-      "Shell",
-      "Dockerfile"
     ]
   },
   {
