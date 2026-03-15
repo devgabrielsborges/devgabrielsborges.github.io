@@ -1,5 +1,31 @@
 [
   {
+    "name": "ecommerce-fraud-detection",
+    "description": "Ecommerce Fraud Detection",
+    "html_url": "https://github.com/devgabrielsborges/ecommerce-fraud-detection",
+    "homepage": null,
+    "language": "Python",
+    "topics": [],
+    "updated_at": "2026-03-14T18:34:08Z",
+    "techTags": [
+      "Python",
+      "Makefile"
+    ]
+  },
+  {
+    "name": "base_kaggle_comp",
+    "description": "Kaggle Competition Template Repository",
+    "html_url": "https://github.com/devgabrielsborges/base_kaggle_comp",
+    "homepage": null,
+    "language": "Python",
+    "topics": [],
+    "updated_at": "2026-03-14T18:24:14Z",
+    "techTags": [
+      "Python",
+      "Makefile"
+    ]
+  },
+  {
     "name": "ralph_codex",
     "description": "Ralph Loops on Codex",
     "html_url": "https://github.com/devgabrielsborges/ralph_codex",
@@ -10,32 +36,6 @@
     "techTags": [
       "Shell",
       "Dockerfile"
-    ]
-  },
-  {
-    "name": "fipex",
-    "description": "FIPE Values EDA and model training",
-    "html_url": "https://github.com/devgabrielsborges/fipex",
-    "homepage": null,
-    "language": "Python",
-    "topics": [],
-    "updated_at": "2026-03-10T17:50:29Z",
-    "techTags": [
-      "Python",
-      "Makefile"
-    ]
-  },
-  {
-    "name": "autorriculum",
-    "description": "LLM based application for creating CVs based on your GitHub and LinkedIn profile",
-    "html_url": "https://github.com/devgabrielsborges/autorriculum",
-    "homepage": null,
-    "language": "TypeScript",
-    "topics": [],
-    "updated_at": "2026-03-07T17:03:51Z",
-    "techTags": [
-      "TypeScript",
-      "TeX"
     ]
   }
 ]
