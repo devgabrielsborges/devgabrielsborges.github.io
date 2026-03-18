@@ -1,5 +1,19 @@
 [
   {
+    "name": "nemotron-reasoning-challenge",
+    "description": "NVIDIA Nemotron Model Reasoning Challenge",
+    "html_url": "https://github.com/devgabrielsborges/nemotron-reasoning-challenge",
+    "homepage": null,
+    "language": "Python",
+    "topics": [],
+    "updated_at": "2026-03-18T04:06:09Z",
+    "techTags": [
+      "Python",
+      "Jupyter Notebook",
+      "Makefile"
+    ]
+  },
+  {
     "name": "ecommerce-fraud-detection",
     "description": "Ecommerce Fraud Detection",
     "html_url": "https://github.com/devgabrielsborges/ecommerce-fraud-detection",
@@ -23,19 +37,6 @@
     "techTags": [
       "Python",
       "Makefile"
-    ]
-  },
-  {
-    "name": "ralph_codex",
-    "description": "Ralph Loops on Codex",
-    "html_url": "https://github.com/devgabrielsborges/ralph_codex",
-    "homepage": null,
-    "language": "Shell",
-    "topics": [],
-    "updated_at": "2026-03-13T18:22:23Z",
-    "techTags": [
-      "Shell",
-      "Dockerfile"
     ]
   }
 ]
