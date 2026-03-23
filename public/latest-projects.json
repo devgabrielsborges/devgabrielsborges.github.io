@@ -1,27 +1,14 @@
 [
   {
-    "name": "nemotron-reasoning-challenge",
-    "description": "NVIDIA Nemotron Model Reasoning Challenge",
-    "html_url": "https://github.com/devgabrielsborges/nemotron-reasoning-challenge",
+    "name": "spr-2026-mammography-report-classification",
+    "description": "spr-2026-mammography-report-classification",
+    "html_url": "https://github.com/devgabrielsborges/spr-2026-mammography-report-classification",
     "homepage": null,
-    "language": "Python",
+    "language": "Jupyter Notebook",
     "topics": [],
-    "updated_at": "2026-03-19T15:53:35Z",
+    "updated_at": "2026-03-23T02:33:49Z",
     "techTags": [
-      "Python",
       "Jupyter Notebook",
-      "Makefile"
-    ]
-  },
-  {
-    "name": "ecommerce-fraud-detection",
-    "description": "Ecommerce Fraud Detection",
-    "html_url": "https://github.com/devgabrielsborges/ecommerce-fraud-detection",
-    "homepage": null,
-    "language": "Python",
-    "topics": [],
-    "updated_at": "2026-03-14T18:34:08Z",
-    "techTags": [
       "Python",
       "Makefile"
     ]
@@ -33,9 +20,23 @@
     "homepage": null,
     "language": "Python",
     "topics": [],
-    "updated_at": "2026-03-14T18:24:14Z",
+    "updated_at": "2026-03-22T17:39:46Z",
     "techTags": [
       "Python",
+      "Makefile"
+    ]
+  },
+  {
+    "name": "nemotron-reasoning-challenge",
+    "description": "NVIDIA Nemotron Model Reasoning Challenge",
+    "html_url": "https://github.com/devgabrielsborges/nemotron-reasoning-challenge",
+    "homepage": null,
+    "language": "Python",
+    "topics": [],
+    "updated_at": "2026-03-19T15:53:35Z",
+    "techTags": [
+      "Python",
+      "Jupyter Notebook",
       "Makefile"
     ]
   }
