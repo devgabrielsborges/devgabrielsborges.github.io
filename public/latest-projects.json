@@ -1,5 +1,34 @@
 [
   {
+    "name": "base_kaggle_comp",
+    "description": "Kaggle Competition Template Repository",
+    "html_url": "https://github.com/devgabrielsborges/base_kaggle_comp",
+    "homepage": null,
+    "language": "Python",
+    "topics": [],
+    "updated_at": "2026-03-26T18:02:29Z",
+    "techTags": [
+      "Python",
+      "Shell",
+      "Makefile"
+    ]
+  },
+  {
+    "name": "predict_customer_churn",
+    "description": "Predict Customer Churn Kaggle Competition",
+    "html_url": "https://github.com/devgabrielsborges/predict_customer_churn",
+    "homepage": null,
+    "language": "Jupyter Notebook",
+    "topics": [],
+    "updated_at": "2026-03-26T15:50:52Z",
+    "techTags": [
+      "Jupyter Notebook",
+      "Python",
+      "Shell",
+      "Makefile"
+    ]
+  },
+  {
     "name": "spr-2026-mammography-report-classification",
     "description": "spr-2026-mammography-report-classification",
     "html_url": "https://github.com/devgabrielsborges/spr-2026-mammography-report-classification",
@@ -10,33 +39,6 @@
     "techTags": [
       "Jupyter Notebook",
       "Python",
-      "Makefile"
-    ]
-  },
-  {
-    "name": "base_kaggle_comp",
-    "description": "Kaggle Competition Template Repository",
-    "html_url": "https://github.com/devgabrielsborges/base_kaggle_comp",
-    "homepage": null,
-    "language": "Python",
-    "topics": [],
-    "updated_at": "2026-03-22T17:39:46Z",
-    "techTags": [
-      "Python",
-      "Makefile"
-    ]
-  },
-  {
-    "name": "nemotron-reasoning-challenge",
-    "description": "NVIDIA Nemotron Model Reasoning Challenge",
-    "html_url": "https://github.com/devgabrielsborges/nemotron-reasoning-challenge",
-    "homepage": null,
-    "language": "Python",
-    "topics": [],
-    "updated_at": "2026-03-19T15:53:35Z",
-    "techTags": [
-      "Python",
-      "Jupyter Notebook",
       "Makefile"
     ]
   }
