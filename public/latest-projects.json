@@ -1,5 +1,19 @@
 [
   {
+    "name": "Predicting-Irrigation-Need",
+    "description": "Predicting Irrigation Need Competition",
+    "html_url": "https://github.com/devgabrielsborges/Predicting-Irrigation-Need",
+    "homepage": null,
+    "language": "Python",
+    "topics": [],
+    "updated_at": "2026-04-01T21:27:25Z",
+    "techTags": [
+      "Python",
+      "Shell",
+      "Makefile"
+    ]
+  },
+  {
     "name": "spr-2026-mammography-report-classification",
     "description": "spr-2026-mammography-report-classification",
     "html_url": "https://github.com/devgabrielsborges/spr-2026-mammography-report-classification",
@@ -22,21 +36,6 @@
     "topics": [],
     "updated_at": "2026-03-26T18:02:29Z",
     "techTags": [
-      "Python",
-      "Shell",
-      "Makefile"
-    ]
-  },
-  {
-    "name": "predict_customer_churn",
-    "description": "Predict Customer Churn Kaggle Competition",
-    "html_url": "https://github.com/devgabrielsborges/predict_customer_churn",
-    "homepage": null,
-    "language": "Jupyter Notebook",
-    "topics": [],
-    "updated_at": "2026-03-26T15:50:52Z",
-    "techTags": [
-      "Jupyter Notebook",
       "Python",
       "Shell",
       "Makefile"
