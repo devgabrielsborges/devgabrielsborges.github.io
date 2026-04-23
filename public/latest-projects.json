@@ -1,5 +1,17 @@
 [
   {
+    "name": "dynamic_clustering_fl_health_conditions",
+    "description": "Dynamic Clustering Federated Learning in Concept Drift Scenarios on Health Conditions",
+    "html_url": "https://github.com/devgabrielsborges/dynamic_clustering_fl_health_conditions",
+    "homepage": null,
+    "language": "Python",
+    "topics": [],
+    "updated_at": "2026-04-23T07:40:36Z",
+    "techTags": [
+      "Python"
+    ]
+  },
+  {
     "name": "PlantCLEF2026",
     "description": "PlantCLEF2026 @ LifeCLEF & CVPR-FGVC",
     "html_url": "https://github.com/devgabrielsborges/PlantCLEF2026",
@@ -26,20 +38,6 @@
       "Shell",
       "Python",
       "PowerShell",
-      "Makefile"
-    ]
-  },
-  {
-    "name": "Predicting-Irrigation-Need",
-    "description": "Predicting Irrigation Need Competition",
-    "html_url": "https://github.com/devgabrielsborges/Predicting-Irrigation-Need",
-    "homepage": null,
-    "language": "Python",
-    "topics": [],
-    "updated_at": "2026-04-01T21:27:25Z",
-    "techTags": [
-      "Python",
-      "Shell",
       "Makefile"
     ]
   }
