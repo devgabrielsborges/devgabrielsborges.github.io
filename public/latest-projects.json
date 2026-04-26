@@ -1,5 +1,18 @@
 [
   {
+    "name": "supernova",
+    "description": "AI Agent Evaluation Pipeline",
+    "html_url": "https://github.com/devgabrielsborges/supernova",
+    "homepage": null,
+    "language": "Python",
+    "topics": [],
+    "updated_at": "2026-04-26T00:36:54Z",
+    "techTags": [
+      "Python",
+      "Shell"
+    ]
+  },
+  {
     "name": "dynamic_clustering_fl_health_conditions",
     "description": "Dynamic Clustering Federated Learning in Concept Drift Scenarios on Health Conditions",
     "html_url": "https://github.com/devgabrielsborges/dynamic_clustering_fl_health_conditions",
@@ -24,21 +37,6 @@
       "Jupyter Notebook",
       "PowerShell",
       "Python"
-    ]
-  },
-  {
-    "name": "base_kaggle_comp",
-    "description": "Kaggle Competition Template Repository",
-    "html_url": "https://github.com/devgabrielsborges/base_kaggle_comp",
-    "homepage": null,
-    "language": "Shell",
-    "topics": [],
-    "updated_at": "2026-04-18T15:34:40Z",
-    "techTags": [
-      "Shell",
-      "Python",
-      "PowerShell",
-      "Makefile"
     ]
   }
 ]
