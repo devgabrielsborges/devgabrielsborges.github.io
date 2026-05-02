@@ -1,5 +1,25 @@
 [
   {
+    "name": "ai-researcher-engineer-spec",
+    "description": "AI-Researcher-Engineer Spec-Kit Template",
+    "html_url": "https://github.com/devgabrielsborges/ai-researcher-engineer-spec",
+    "homepage": null,
+    "language": null,
+    "topics": [],
+    "updated_at": "2026-05-01T15:32:19Z",
+    "techTags": []
+  },
+  {
+    "name": "camel",
+    "description": "A plug'n'play evaluation pipeline for AI Agents. Deterministic scorers, MLflow tracking",
+    "html_url": "https://github.com/devgabrielsborges/camel",
+    "homepage": null,
+    "language": null,
+    "topics": [],
+    "updated_at": "2026-05-01T14:04:33Z",
+    "techTags": []
+  },
+  {
     "name": "dynamic_clustering_fl_health_conditions",
     "description": "Dynamic Clustering Federated Learning in Concept Drift Scenarios on Health Conditions",
     "html_url": "https://github.com/devgabrielsborges/dynamic_clustering_fl_health_conditions",
@@ -9,36 +29,6 @@
     "updated_at": "2026-04-23T07:40:36Z",
     "techTags": [
       "Python"
-    ]
-  },
-  {
-    "name": "PlantCLEF2026",
-    "description": "PlantCLEF2026 @ LifeCLEF & CVPR-FGVC",
-    "html_url": "https://github.com/devgabrielsborges/PlantCLEF2026",
-    "homepage": null,
-    "language": "Shell",
-    "topics": [],
-    "updated_at": "2026-04-19T17:27:48Z",
-    "techTags": [
-      "Shell",
-      "Jupyter Notebook",
-      "PowerShell",
-      "Python"
-    ]
-  },
-  {
-    "name": "base_kaggle_comp",
-    "description": "Kaggle Competition Template Repository",
-    "html_url": "https://github.com/devgabrielsborges/base_kaggle_comp",
-    "homepage": null,
-    "language": "Shell",
-    "topics": [],
-    "updated_at": "2026-04-18T15:34:40Z",
-    "techTags": [
-      "Shell",
-      "Python",
-      "PowerShell",
-      "Makefile"
     ]
   }
 ]
