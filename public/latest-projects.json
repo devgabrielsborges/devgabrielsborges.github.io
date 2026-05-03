@@ -1,5 +1,20 @@
 [
   {
+    "name": "camel",
+    "description": "CAMEL — Capability Assessment Methodology for Evaluating LLMs",
+    "html_url": "https://github.com/devgabrielsborges/camel",
+    "homepage": "",
+    "language": "Python",
+    "topics": [],
+    "updated_at": "2026-05-03T05:39:00Z",
+    "techTags": [
+      "Python",
+      "Shell",
+      "PowerShell",
+      "Jinja"
+    ]
+  },
+  {
     "name": "ai-researcher-engineer-spec",
     "description": "AI-Researcher-Engineer Spec-Kit Template",
     "html_url": "https://github.com/devgabrielsborges/ai-researcher-engineer-spec",
@@ -7,16 +22,6 @@
     "language": null,
     "topics": [],
     "updated_at": "2026-05-01T15:32:19Z",
-    "techTags": []
-  },
-  {
-    "name": "camel",
-    "description": "A plug'n'play evaluation pipeline for AI Agents. Deterministic scorers, MLflow tracking",
-    "html_url": "https://github.com/devgabrielsborges/camel",
-    "homepage": null,
-    "language": null,
-    "topics": [],
-    "updated_at": "2026-05-01T14:04:33Z",
     "techTags": []
   },
   {
