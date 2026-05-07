@@ -8,7 +8,10 @@
     "topics": [],
     "updated_at": "2026-05-05T19:59:35Z",
     "techTags": [
-      "Python"
+      "Python",
+      "Shell",
+      "PowerShell",
+      "Jinja"
     ]
   },
   {
