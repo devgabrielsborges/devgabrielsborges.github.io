@@ -1,5 +1,20 @@
 [
   {
+    "name": "rinha-2026-scala",
+    "description": "Rinha de Backend 2026 - Scala",
+    "html_url": "https://github.com/devgabrielsborges/rinha-2026-scala",
+    "homepage": null,
+    "language": "Shell",
+    "topics": [],
+    "updated_at": "2026-05-07T21:20:32Z",
+    "techTags": [
+      "Shell",
+      "Scala",
+      "PowerShell",
+      "Dockerfile"
+    ]
+  },
+  {
     "name": "camel",
     "description": "CAMEL — Capability Assessment Methodology for Evaluating LLMs",
     "html_url": "https://github.com/devgabrielsborges/camel",
@@ -23,17 +38,5 @@
     "topics": [],
     "updated_at": "2026-05-01T15:32:19Z",
     "techTags": []
-  },
-  {
-    "name": "dynamic_clustering_fl_health_conditions",
-    "description": "Dynamic Clustering Federated Learning in Concept Drift Scenarios on Health Conditions",
-    "html_url": "https://github.com/devgabrielsborges/dynamic_clustering_fl_health_conditions",
-    "homepage": null,
-    "language": "Python",
-    "topics": [],
-    "updated_at": "2026-04-23T07:40:36Z",
-    "techTags": [
-      "Python"
-    ]
   }
 ]
