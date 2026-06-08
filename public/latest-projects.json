@@ -1,5 +1,17 @@
 [
   {
+    "name": "trabProgEstatistca",
+    "description": "Projeto em desenvolvimento ativo no GitHub.",
+    "html_url": "https://github.com/devgabrielsborges/trabProgEstatistca",
+    "homepage": null,
+    "language": "Python",
+    "topics": [],
+    "updated_at": "2026-06-08T11:47:04Z",
+    "techTags": [
+      "Python"
+    ]
+  },
+  {
     "name": "camel",
     "description": "CAMEL — Capability Assessment Methodology for Evaluating LLMs",
     "html_url": "https://github.com/devgabrielsborges/camel",
@@ -23,17 +35,5 @@
     "topics": [],
     "updated_at": "2026-05-01T15:32:19Z",
     "techTags": []
-  },
-  {
-    "name": "dynamic_clustering_fl_health_conditions",
-    "description": "Dynamic Clustering Federated Learning in Concept Drift Scenarios on Health Conditions",
-    "html_url": "https://github.com/devgabrielsborges/dynamic_clustering_fl_health_conditions",
-    "homepage": null,
-    "language": "Python",
-    "topics": [],
-    "updated_at": "2026-04-23T07:40:36Z",
-    "techTags": [
-      "Python"
-    ]
   }
 ]
