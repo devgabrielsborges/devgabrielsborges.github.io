@@ -1,12 +1,26 @@
 [
   {
+    "name": "knowledge_distillation",
+    "description": "Projeto em desenvolvimento ativo no GitHub.",
+    "html_url": "https://github.com/devgabrielsborges/knowledge_distillation",
+    "homepage": null,
+    "language": "Shell",
+    "topics": [],
+    "updated_at": "2026-06-10T14:25:23Z",
+    "techTags": [
+      "Shell",
+      "PowerShell",
+      "Python"
+    ]
+  },
+  {
     "name": "trabProgEstatistca",
     "description": "Projeto em desenvolvimento ativo no GitHub.",
     "html_url": "https://github.com/devgabrielsborges/trabProgEstatistca",
     "homepage": null,
     "language": "Python",
     "topics": [],
-    "updated_at": "2026-06-08T21:29:15Z",
+    "updated_at": "2026-06-09T14:49:42Z",
     "techTags": [
       "Python"
     ]
@@ -25,15 +39,5 @@
       "PowerShell",
       "Jinja"
     ]
-  },
-  {
-    "name": "ai-researcher-engineer-spec",
-    "description": "AI-Researcher-Engineer Spec-Kit Template",
-    "html_url": "https://github.com/devgabrielsborges/ai-researcher-engineer-spec",
-    "homepage": null,
-    "language": null,
-    "topics": [],
-    "updated_at": "2026-05-01T15:32:19Z",
-    "techTags": []
   }
 ]
