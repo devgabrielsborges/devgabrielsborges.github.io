@@ -1,5 +1,19 @@
 [
   {
+    "name": "fipex-bot",
+    "description": "A Telegram Agent for helping with FIPE index",
+    "html_url": "https://github.com/devgabrielsborges/fipex-bot",
+    "homepage": null,
+    "language": "Python",
+    "topics": [],
+    "updated_at": "2026-06-27T21:57:52Z",
+    "techTags": [
+      "Python",
+      "Shell",
+      "PowerShell"
+    ]
+  },
+  {
     "name": "knowledge_distillation",
     "description": "Projeto em desenvolvimento ativo no GitHub.",
     "html_url": "https://github.com/devgabrielsborges/knowledge_distillation",
@@ -23,21 +37,6 @@
     "updated_at": "2026-06-09T14:49:42Z",
     "techTags": [
       "Python"
-    ]
-  },
-  {
-    "name": "camel",
-    "description": "CAMEL — Capability Assessment Methodology for Evaluating LLMs",
-    "html_url": "https://github.com/devgabrielsborges/camel",
-    "homepage": "",
-    "language": "Python",
-    "topics": [],
-    "updated_at": "2026-05-05T19:59:35Z",
-    "techTags": [
-      "Python",
-      "Shell",
-      "PowerShell",
-      "Jinja"
     ]
   }
 ]
